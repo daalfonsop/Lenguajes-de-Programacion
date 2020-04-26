@@ -211,7 +211,9 @@ public class Login1 extends javax.swing.JFrame {
         }
     }
     
-    
+    public class dog{
+        
+    }
     
 
    
