@@ -22,7 +22,9 @@ public class Usuario {
     private String cedula;
     private String tipoUsuario;
 
-    
+    public Usuario(){
+        
+    }
     public Usuario(int idUsario, String nombre, String primerApellido, String segundoApellido, String Contrasena,String correo,String direccion, String nickname, String contacto, 
             String cedula, String tipoUsuario){
      
