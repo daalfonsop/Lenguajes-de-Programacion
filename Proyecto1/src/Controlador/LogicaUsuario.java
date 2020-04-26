@@ -29,7 +29,7 @@ public class LogicaUsuario {
     public Usuario iniciaSesion (String user, String pass){
         try{
             conexion= Conexion.getConnection();
-            sentencias = conexion.prepareStatement("select * from Usuario where  Usuario= ? and Pass= ?");
+            sentencias = conexion.prepareStatement("select * from usuarios where  Usuario= ? and Pass= ?");
             sentencias.setString(1, user);
             sentencias.setString(2, pass);
             rs = sentencias.executeQuery(); // ejecuto en la base de datos

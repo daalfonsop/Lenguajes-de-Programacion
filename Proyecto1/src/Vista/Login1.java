@@ -5,6 +5,9 @@
  */
 package Vista;
 
+import Controlador.LogicaUsuario;
+import Modelo.Usuario;
+import javax.swing.JOptionPane;
 import rojeru_san.complementos.RSUtilities;
 
 /**
@@ -13,7 +16,7 @@ import rojeru_san.complementos.RSUtilities;
  */
 public class Login1 extends javax.swing.JFrame {
 
-    
+    LogicaUsuario logica = new LogicaUsuario();
     public Login1() {
         initComponents();
         RSUtilities.setCenterWindow(this);
@@ -139,8 +142,10 @@ public class Login1 extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void botonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonActionPerformed
-
-        validar();
+        String user = usuario.getText();
+        String pass = contraseña.getText();
+        inicioSesion(user,pass);
+        
     }//GEN-LAST:event_botonActionPerformed
 
     /**
@@ -196,14 +201,15 @@ public class Login1 extends javax.swing.JFrame {
     private RSMaterialComponent.RSTextFieldIconDos usuario;
     // End of variables declaration//GEN-END:variables
 
-    private void validar() {
+    private void inicioSesion(String user, String pass) {
         
-        if(usuario.getText().isEmpty() || contraseña.getText().isEmpty()){
+        if(user.isEmpty() || pass.isEmpty()){
             jLabel1.setText("¡Campos Requeridos!");
         }else{
-            if(usuario.getText().equals("admin") && contraseña.getText().equals("123")){
-                this.dispose();
-                new VistaAdmin.Home().setVisible(true);
+            Usuario datos = logica.iniciaSesion(user, pass);
+            if(datos != null){
+                JOptionPane.showMessageDialog(null,"Bienvenido:"+user );
+                gestionCliente();
             }else{
                 jLabel1.setText("¡Datos incorrectos, intentelo nuevamente!");
             }
@@ -211,8 +217,9 @@ public class Login1 extends javax.swing.JFrame {
         }
     }
     
-    public class dog{
-        
+    public void gestionCliente(){
+        this.dispose();
+        new VistaAdmin.Home().setVisible(true);
     }
     
 
