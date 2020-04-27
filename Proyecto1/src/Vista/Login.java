@@ -8,6 +8,7 @@ package Vista;
 import Controlador.LogicaUsuario;
 import Modelo.Usuario;
 import java.awt.Color;
+import javax.swing.JPanel;
 
 import rojeru_san.complementos.RSUtilities;
 
@@ -22,8 +23,9 @@ public class Login extends javax.swing.JPanel {
      */
     private Login1 login;
     LogicaUsuario logica = new LogicaUsuario();
-    public Login() {
+    public Login(Login1 login) {
         initComponents();
+        this.login=login;
         RSUtilities.setCenterWindow(login);
         RSUtilities.setOpaqueWindow(login, false);
     }
@@ -158,19 +160,20 @@ public class Login extends javax.swing.JPanel {
         
         switch (tipo) {
             case "admin":
-                new VistaAdmin.Home().setVisible(true);
+                login.irAHome(this);
                 break;
             case "Odontologo":
             case "Auxiliar":
-                new VistaOdon.Home().setVisible(true);
+                login.irAHomeOdon(this);
                 break;
             case "Cliente":
-                new VistaPaciente.Home().setVisible(true);
+                login.irAHomePaciente(this);
                 break;
             default:
                 break;
         }
     }  
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel advertencia;

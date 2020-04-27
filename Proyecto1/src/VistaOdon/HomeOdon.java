@@ -3,30 +3,24 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package VistaPaciente;
+package VistaOdon;
 
-import VistaOdon.*;
-import VistaAdmin.*;
 import Vista.Login1;
-import javax.swing.JPanel;
-import rojeru_san.complementos.RSUtilities;
-import rojeru_san.efectos.ValoresEnum;
 import rojerusan.RSPanelsSlider;
 
 /**
  *
- * @author diego
+ * @author walter
  */
-public class Home extends javax.swing.JFrame {
+public class HomeOdon extends javax.swing.JPanel {
 
     /**
-     * Creates new form Home
+     * Creates new form HomeOdon
      */
-    
-    public Home() {
+    private Login1 login;
+    public HomeOdon(Login1 login) {
         initComponents();
-        RSUtilities.setCenterWindow(this);
-        
+        this.login=login;
     }
 
     /**
@@ -82,10 +76,9 @@ public class Home extends javax.swing.JFrame {
         rSLabelHora3 = new rojeru_san.rsdate.RSLabelHora();
         jLabel3 = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
         boton_salir.setBackground(new java.awt.Color(0, 37, 64));
         boton_salir.setText("Salir");
+        boton_salir.setIcons(rojeru_san.efectos.ValoresEnum.ICONS.EXIT_TO_APP);
         boton_salir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 boton_salirActionPerformed(evt);
@@ -105,7 +98,7 @@ public class Home extends javax.swing.JFrame {
         });
 
         boton_pacientes.setBackground(new java.awt.Color(0, 37, 64));
-        boton_pacientes.setText("Citas");
+        boton_pacientes.setText("Pacientes");
         boton_pacientes.setIcons(rojeru_san.efectos.ValoresEnum.ICONS.PERSON);
         boton_pacientes.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -510,8 +503,8 @@ public class Home extends javax.swing.JFrame {
 
         panel.add(panelAux, "card5");
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
+        this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
@@ -524,23 +517,10 @@ public class Home extends javax.swing.JFrame {
             .addComponent(panele, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(panel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
-
-        pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void boton_pacientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton_pacientesActionPerformed
-
-        this.boton_home.setSelected(false);
-        this.boton_pacientes.setSelected(true);
-        this.boton_perfil.setSelected(false);
-        this.boton_config.setSelected(false);
-        panel.setPanelSlider(1, panelOdon, RSPanelsSlider.DIRECT.LEFT);
-            
-        
-    }//GEN-LAST:event_boton_pacientesActionPerformed
-
     private void boton_salirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton_salirActionPerformed
-        salir();
+        login.regresarALogin(this);
     }//GEN-LAST:event_boton_salirActionPerformed
 
     private void boton_homeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton_homeActionPerformed
@@ -549,16 +529,26 @@ public class Home extends javax.swing.JFrame {
         this.boton_perfil.setSelected(false);
         this.boton_config.setSelected(false);
 
-        panel.setPanelSlider(1, panelHome, RSPanelsSlider.DIRECT.LEFT);          
+        panel.setPanelSlider(1, panelHome, RSPanelsSlider.DIRECT.LEFT);
     }//GEN-LAST:event_boton_homeActionPerformed
+
+    private void boton_pacientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton_pacientesActionPerformed
+
+        this.boton_home.setSelected(false);
+        this.boton_pacientes.setSelected(true);
+        this.boton_perfil.setSelected(false);
+        this.boton_config.setSelected(false);
+        panel.setPanelSlider(1, panelOdon, RSPanelsSlider.DIRECT.LEFT);
+
+    }//GEN-LAST:event_boton_pacientesActionPerformed
 
     private void boton_perfilActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton_perfilActionPerformed
         this.boton_home.setSelected(false);
         this.boton_pacientes.setSelected(false);
         this.boton_perfil.setSelected(true);
         this.boton_config.setSelected(false);
-            
-        panel.setPanelSlider(1, panelAux, RSPanelsSlider.DIRECT.LEFT);          
+
+        panel.setPanelSlider(1, panelAux, RSPanelsSlider.DIRECT.LEFT);
     }//GEN-LAST:event_boton_perfilActionPerformed
 
     private void boton_configActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton_configActionPerformed
@@ -566,52 +556,10 @@ public class Home extends javax.swing.JFrame {
         this.boton_pacientes.setSelected(false);
         this.boton_perfil.setSelected(false);
         this.boton_config.setSelected(true);
-        
-        panel.setPanelSlider(1, panelPaci, RSPanelsSlider.DIRECT.LEFT);          
+
+        panel.setPanelSlider(1, panelPaci, RSPanelsSlider.DIRECT.LEFT);
     }//GEN-LAST:event_boton_configActionPerformed
 
-    public void salir(){
-        this.dispose();
-        new Login1().setVisible(true);
-    }
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Home.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Home.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Home.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Home.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new Home().setVisible(true);
-            }
-        });
-    }
-    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private RSMaterialComponent.RSButtonMaterialIconUno boton_config;

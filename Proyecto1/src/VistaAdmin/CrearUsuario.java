@@ -27,7 +27,7 @@ public class CrearUsuario extends javax.swing.JPanel {
      * Creates new form CrearUsuario
      */
     private String nombre, apellido, cedula, correo, numeroContacto, apellid2, pass,repeatPass ,usuario, direccion, tipoUsuario;
-    private Home nuevo;
+    
     LogicaUsuario logica = new LogicaUsuario();
     public CrearUsuario() {
         initComponents();
@@ -220,7 +220,7 @@ public class CrearUsuario extends javax.swing.JPanel {
                 || (correo.equals("Correo electronico (personal o empresarial)")) || (direccion.equals("Dirección domicilio")) || (numeroContacto.equals("Numero de contacto"))
                 || (apellido.equals("Primer Apellido")) || (repeatPass.equals("Repita la Contraseña")) || (usuario.equals("Usuario"))
                 || (bx_tipo_usuario.getSelectedItem().equals(""))) {
-            JOptionPane.showMessageDialog(nuevo, "Debe llenar todos los campos con * ", "Aviso!", 1);
+            
         } else if (!pass.equals(repeatPass) ) {
             System.out.println("contraseña errada");
         } else {
@@ -242,7 +242,7 @@ public class CrearUsuario extends javax.swing.JPanel {
     }//GEN-LAST:event_boton_crearActionPerformed
 
     private void boton_salirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton_salirActionPerformed
-        salir(nuevo);
+        
     }//GEN-LAST:event_boton_salirActionPerformed
 
     private void txt_usuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_usuarioActionPerformed
@@ -292,9 +292,7 @@ public class CrearUsuario extends javax.swing.JPanel {
         }
     }//GEN-LAST:event_txt_segundoApellidoKeyTyped
 
-    public void salir(Home ventana) {
-        ventana.setVisible(false);
-    }
+    
 
     public void holders() {
         PlaceHolder holder;

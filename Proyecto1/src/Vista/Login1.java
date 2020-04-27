@@ -7,8 +7,12 @@ package Vista;
 
 import Controlador.LogicaUsuario;
 import Modelo.Usuario;
+import VistaAdmin.HomeAdmin;
+import VistaOdon.HomeOdon;
+import VistaPaciente.HomePaciente;
 import java.awt.Color;
 import javax.swing.JOptionPane;
+import javax.swing.JPanel;
 import rojeru_san.complementos.RSUtilities;
 
 /**
@@ -17,12 +21,18 @@ import rojeru_san.complementos.RSUtilities;
  */
 public class Login1 extends javax.swing.JFrame {
 
-    
+    private Login login;
+    private HomeAdmin homeAdmin;
+    private HomeOdon homeOdon;
+    private HomePaciente homePaciente;
     public Login1() {
-        initComponents();
-        
-        
-        
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
+        setName("pricipalJFrame");
+        setTitle("Proyecto");
+        setResizable(false);
+        pack(); 
+        setLocationRelativeTo(null);//mirat
+        iniciar(); 
     }
 
     /**
@@ -82,7 +92,47 @@ public class Login1 extends javax.swing.JFrame {
             }
         });
     }
-
+    private void iniciar() {
+        login = new Login(this);
+        login.setVisible(true);
+        add(login);
+        pack();
+        setLocationRelativeTo(null);  
+    }
+    public void irAHome(JPanel jPanel) {
+        remove(jPanel);
+        homeAdmin = new HomeAdmin(this);
+        homeAdmin.setVisible(true);
+        add(homeAdmin);
+        pack();
+        setLocationRelativeTo(null);         
+    }
+    public void regresarALogin(JPanel jPanel){
+        remove(jPanel);
+        login = new Login(this);
+        login.setVisible(true);
+        add(login);
+        pack();
+        setLocationRelativeTo(null);
+    }
+    public void irAHomeOdon(JPanel jPanel) {
+        remove(jPanel);
+        homeOdon = new HomeOdon(this);
+        homeOdon.setVisible(true);
+        add(homeOdon);
+        pack();
+        setLocationRelativeTo(null);         
+    }
+    public void irAHomePaciente(JPanel jPanel) {
+        remove(jPanel);
+        homePaciente = new HomePaciente(this);
+        homePaciente.setVisible(true);
+        add(homePaciente);
+        pack();
+        setLocationRelativeTo(null);         
+    }
+    
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     // End of variables declaration//GEN-END:variables
 
