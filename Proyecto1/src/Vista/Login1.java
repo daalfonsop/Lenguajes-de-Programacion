@@ -7,6 +7,7 @@ package Vista;
 
 import Controlador.LogicaUsuario;
 import Modelo.Usuario;
+import java.awt.Color;
 import javax.swing.JOptionPane;
 import rojeru_san.complementos.RSUtilities;
 
@@ -21,7 +22,8 @@ public class Login1 extends javax.swing.JFrame {
         initComponents();
         RSUtilities.setCenterWindow(this);
         RSUtilities.setOpaqueWindow(this, false);
-        jLabel1.setText("");
+        
+        
     }
 
     /**
@@ -40,10 +42,11 @@ public class Login1 extends javax.swing.JFrame {
         contraseña = new RSMaterialComponent.RSPasswordIconDos();
         usuario = new RSMaterialComponent.RSTextFieldIconDos();
         boton = new rojerusan.RSMaterialButtonRectangle();
-        jLabel1 = new javax.swing.JLabel();
+        advertencia = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -65,10 +68,10 @@ public class Login1 extends javax.swing.JFrame {
             }
         });
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 0, 0));
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("¡Datos incorrectos, intentelo nuevamente!");
+        advertencia.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        advertencia.setForeground(new java.awt.Color(255, 255, 255));
+        advertencia.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        advertencia.setText("¡Datos incorrectos, intentelo nuevamente!");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -79,15 +82,15 @@ public class Login1 extends javax.swing.JFrame {
                 .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(0, 27, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabel1)
-                    .addComponent(contraseña, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                    .addComponent(usuario, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
-                .addContainerGap(37, Short.MAX_VALUE))
-            .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(68, 68, 68)
                 .addComponent(boton, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(70, Short.MAX_VALUE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(contraseña, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                    .addComponent(usuario, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                    .addComponent(advertencia, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -97,11 +100,11 @@ public class Login1 extends javax.swing.JFrame {
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(28, 28, 28)
                 .addComponent(usuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(28, 28, 28)
+                .addGap(26, 26, 26)
                 .addComponent(contraseña, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(34, 34, 34)
+                .addComponent(advertencia)
+                .addGap(4, 4, 4)
                 .addComponent(boton, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
@@ -125,18 +128,7 @@ public class Login1 extends javax.swing.JFrame {
                 .addContainerGap(98, Short.MAX_VALUE))
         );
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(rSPanelGradiente1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(rSPanelGradiente1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
+        getContentPane().add(rSPanelGradiente1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -191,9 +183,9 @@ public class Login1 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel advertencia;
     private rojerusan.RSMaterialButtonRectangle boton;
     private RSMaterialComponent.RSPasswordIconDos contraseña;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private rojeru_san.rspanel.RSPanelGradiente rSPanelGradiente1;
@@ -204,14 +196,15 @@ public class Login1 extends javax.swing.JFrame {
     private void inicioSesion(String user, String pass) {
         
         if(user.isEmpty() || pass.isEmpty()){
-            jLabel1.setText("¡Campos Requeridos!");
+            advertencia.setText("          ¡No puede dejar campos vacios!          ");
+            advertencia.setForeground(Color.red);
         }else{
             Usuario datos = logica.iniciaSesion(user, pass);
             if(datos != null){
-                JOptionPane.showMessageDialog(null,"Bienvenido:"+user );
                 gestionCliente();
             }else{
-                jLabel1.setText("¡Datos incorrectos, intentelo nuevamente!");
+                advertencia.setText("¡Datos incorrectos, intentelo nuevamente!");
+                advertencia.setForeground(Color.red);
             }
             
         }
@@ -220,11 +213,7 @@ public class Login1 extends javax.swing.JFrame {
     public void gestionCliente(){
         this.dispose();
         new VistaAdmin.Home().setVisible(true);
-    }
-    
-
-   
-        
+    }    
 }
 
 

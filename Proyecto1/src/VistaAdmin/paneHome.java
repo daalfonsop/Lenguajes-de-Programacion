@@ -14,7 +14,9 @@ public class paneHome extends javax.swing.JPanel {
     /**
      * Creates new form panelOdontologos
      */
+    
     public paneHome() {
+        
         initComponents();
     }
 
@@ -27,7 +29,6 @@ public class paneHome extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        rSCalendar1 = new rojeru_san.rsdate.RSCalendar();
         panel1 = new java.awt.Panel();
         jLabel1 = new javax.swing.JLabel();
         rSLabelHora1 = new rojeru_san.rsdate.RSLabelHora();
@@ -89,7 +90,6 @@ public class paneHome extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
     private java.awt.Panel panel1;
-    private rojeru_san.rsdate.RSCalendar rSCalendar1;
     private rojeru_san.rsdate.RSCalendar rSCalendar2;
     private rojeru_san.rsdate.RSLabelHora rSLabelHora1;
     // End of variables declaration//GEN-END:variables
