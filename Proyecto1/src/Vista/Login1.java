@@ -201,7 +201,7 @@ public class Login1 extends javax.swing.JFrame {
         }else{
             Usuario datos = logica.iniciaSesion(user, pass);
             if(datos != null){
-                gestionCliente();
+                gestionCliente(datos.getTipoUsuario());
             }else{
                 advertencia.setText("¡Datos incorrectos, intentelo nuevamente!");
                 advertencia.setForeground(Color.red);
@@ -210,9 +210,22 @@ public class Login1 extends javax.swing.JFrame {
         }
     }
     
-    public void gestionCliente(){
+    public void gestionCliente(String tipo){
         this.dispose();
-        new VistaAdmin.Home().setVisible(true);
+        switch (tipo) {
+            case "admin":
+                new VistaAdmin.Home().setVisible(true);
+                break;
+            case "Odontologo":
+            case "Auxiliar":
+                new VistaOdon.Home().setVisible(true);
+                break;
+            case "Cliente":
+                new VistaPaciente.Home().setVisible(true);
+                break;
+            default:
+                break;
+        }
     }    
 }
 

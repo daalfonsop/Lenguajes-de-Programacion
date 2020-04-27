@@ -3,8 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package VistaAdmin;
+package VistaOdon;
 
+import VistaAdmin.*;
 import Vista.Login1;
 import javax.swing.JPanel;
 import rojeru_san.complementos.RSUtilities;
@@ -24,6 +25,7 @@ public class Home extends javax.swing.JFrame {
     public Home() {
         initComponents();
         RSUtilities.setCenterWindow(this);
+        
     }
 
     /**
@@ -38,10 +40,10 @@ public class Home extends javax.swing.JFrame {
         panele = new rojeru_san.rspanel.RSPanelGradiente();
         boton_salir = new RSMaterialComponent.RSButtonMaterialIconUno();
         boton_home = new RSMaterialComponent.RSButtonMaterialIconUno();
-        boton_odontologos = new RSMaterialComponent.RSButtonMaterialIconUno();
-        boton_auxiliares = new RSMaterialComponent.RSButtonMaterialIconUno();
-        jSeparator1 = new javax.swing.JSeparator();
         boton_pacientes = new RSMaterialComponent.RSButtonMaterialIconUno();
+        boton_perfil = new RSMaterialComponent.RSButtonMaterialIconUno();
+        jSeparator1 = new javax.swing.JSeparator();
+        boton_config = new RSMaterialComponent.RSButtonMaterialIconUno();
         panel = new rojerusan.RSPanelsSlider();
         panelHome = new javax.swing.JPanel();
         rSCalendar2 = new rojeru_san.rsdate.RSCalendar();
@@ -50,24 +52,24 @@ public class Home extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         panelOdon = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        rSTableMetro11 = new rojerusan.RSTableMetro1();
         rSButtonMaterialIconUno1 = new RSMaterialComponent.RSButtonMaterialIconUno();
         rSButtonMaterialIconUno2 = new RSMaterialComponent.RSButtonMaterialIconUno();
         rSButtonMaterialIconUno3 = new RSMaterialComponent.RSButtonMaterialIconUno();
         jPanel3 = new javax.swing.JPanel();
         rSLabelHora2 = new rojeru_san.rsdate.RSLabelHora();
         jLabel2 = new javax.swing.JLabel();
-        jScrollPane6 = new javax.swing.JScrollPane();
-        rSTableMetro15 = new rojerusan.RSTableMetro1();
         panelPaci = new javax.swing.JPanel();
         jPanel6 = new javax.swing.JPanel();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        rSTableMetro13 = new rojerusan.RSTableMetro1();
         rSButtonMaterialIconUno7 = new RSMaterialComponent.RSButtonMaterialIconUno();
         rSButtonMaterialIconUno8 = new RSMaterialComponent.RSButtonMaterialIconUno();
         rSButtonMaterialIconUno9 = new RSMaterialComponent.RSButtonMaterialIconUno();
         jPanel7 = new javax.swing.JPanel();
         rSLabelHora4 = new rojeru_san.rsdate.RSLabelHora();
         jLabel4 = new javax.swing.JLabel();
-        jScrollPane5 = new javax.swing.JScrollPane();
-        rSTableMetro14 = new rojerusan.RSTableMetro1();
         panelAux = new javax.swing.JPanel();
         jPanel4 = new javax.swing.JPanel();
         jScrollPane3 = new javax.swing.JScrollPane();
@@ -102,24 +104,6 @@ public class Home extends javax.swing.JFrame {
             }
         });
 
-        boton_odontologos.setBackground(new java.awt.Color(0, 37, 64));
-        boton_odontologos.setText("Odontologos");
-        boton_odontologos.setIcons(rojeru_san.efectos.ValoresEnum.ICONS.PERSON);
-        boton_odontologos.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                boton_odontologosActionPerformed(evt);
-            }
-        });
-
-        boton_auxiliares.setBackground(new java.awt.Color(0, 37, 64));
-        boton_auxiliares.setText("Auxiliares");
-        boton_auxiliares.setIcons(rojeru_san.efectos.ValoresEnum.ICONS.PERSON);
-        boton_auxiliares.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                boton_auxiliaresActionPerformed(evt);
-            }
-        });
-
         boton_pacientes.setBackground(new java.awt.Color(0, 37, 64));
         boton_pacientes.setText("Pacientes");
         boton_pacientes.setIcons(rojeru_san.efectos.ValoresEnum.ICONS.PERSON);
@@ -129,28 +113,46 @@ public class Home extends javax.swing.JFrame {
             }
         });
 
+        boton_perfil.setBackground(new java.awt.Color(0, 37, 64));
+        boton_perfil.setText("Perfil");
+        boton_perfil.setIcons(rojeru_san.efectos.ValoresEnum.ICONS.PERSON);
+        boton_perfil.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                boton_perfilActionPerformed(evt);
+            }
+        });
+
+        boton_config.setBackground(new java.awt.Color(0, 37, 64));
+        boton_config.setText("Configuración");
+        boton_config.setIcons(rojeru_san.efectos.ValoresEnum.ICONS.PERSON);
+        boton_config.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                boton_configActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout paneleLayout = new javax.swing.GroupLayout(panele);
         panele.setLayout(paneleLayout);
         paneleLayout.setHorizontalGroup(
             paneleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(boton_home, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 158, Short.MAX_VALUE)
-            .addComponent(boton_odontologos, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-            .addComponent(boton_auxiliares, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+            .addComponent(boton_pacientes, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+            .addComponent(boton_perfil, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
             .addComponent(boton_salir, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
             .addComponent(jSeparator1)
-            .addComponent(boton_pacientes, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+            .addComponent(boton_config, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
         );
         paneleLayout.setVerticalGroup(
             paneleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(paneleLayout.createSequentialGroup()
-                .addGap(127, 127, 127)
+                .addGap(122, 122, 122)
                 .addComponent(boton_home, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(1, 1, 1)
-                .addComponent(boton_odontologos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(4, 4, 4)
-                .addComponent(boton_auxiliares, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(boton_perfil, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(4, 4, 4)
                 .addComponent(boton_pacientes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(boton_config, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -217,6 +219,19 @@ public class Home extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
+        rSTableMetro11.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane2.setViewportView(rSTableMetro11);
+
         rSButtonMaterialIconUno1.setText("Agregar");
         rSButtonMaterialIconUno1.setIcons(rojeru_san.efectos.ValoresEnum.ICONS.ADD_CIRCLE_OUTLINE);
 
@@ -225,6 +240,33 @@ public class Home extends javax.swing.JFrame {
 
         rSButtonMaterialIconUno3.setText("Eliminar");
         rSButtonMaterialIconUno3.setIcons(rojeru_san.efectos.ValoresEnum.ICONS.DELETE);
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 615, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(rSButtonMaterialIconUno1, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(rSButtonMaterialIconUno2, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(rSButtonMaterialIconUno3, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(107, 107, 107)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(rSButtonMaterialIconUno1, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(rSButtonMaterialIconUno2, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(rSButtonMaterialIconUno3, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 243, Short.MAX_VALUE)
+                .addGap(53, 53, 53))
+        );
 
         jPanel3.setBackground(new java.awt.Color(0, 112, 192));
 
@@ -241,7 +283,7 @@ public class Home extends javax.swing.JFrame {
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 203, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 253, Short.MAX_VALUE)
                 .addComponent(rSLabelHora2, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
@@ -255,64 +297,21 @@ public class Home extends javax.swing.JFrame {
                 .addContainerGap(35, Short.MAX_VALUE))
         );
 
-        rSTableMetro15.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null}
-            },
-            new String [] {
-                "Nombre", "Apellido(s)", "Dirección", "Correo", "Contacto", "Usuario", "Contraseña", "ID"
-            }
-        ) {
-            Class[] types = new Class [] {
-                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Integer.class
-            };
-
-            public Class getColumnClass(int columnIndex) {
-                return types [columnIndex];
-            }
-        });
-        jScrollPane6.setViewportView(rSTableMetro15);
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap(260, Short.MAX_VALUE)
-                .addComponent(rSButtonMaterialIconUno1, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(rSButtonMaterialIconUno2, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(rSButtonMaterialIconUno3, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-            .addComponent(jScrollPane6, javax.swing.GroupLayout.DEFAULT_SIZE, 615, Short.MAX_VALUE)
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(rSButtonMaterialIconUno1, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(rSButtonMaterialIconUno2, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(rSButtonMaterialIconUno3, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane6, javax.swing.GroupLayout.DEFAULT_SIZE, 309, Short.MAX_VALUE))
-        );
-
         javax.swing.GroupLayout panelOdonLayout = new javax.swing.GroupLayout(panelOdon);
         panelOdon.setLayout(panelOdonLayout);
         panelOdonLayout.setHorizontalGroup(
             panelOdonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(panelOdonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         panelOdonLayout.setVerticalGroup(
             panelOdonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(panelOdonLayout.createSequentialGroup()
+                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 350, Short.MAX_VALUE))
+            .addGroup(panelOdonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         panel.add(panelOdon, "card4");
@@ -320,6 +319,19 @@ public class Home extends javax.swing.JFrame {
         panelPaci.setName("panelPaci"); // NOI18N
 
         jPanel6.setBackground(new java.awt.Color(255, 255, 255));
+
+        rSTableMetro13.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane4.setViewportView(rSTableMetro13);
 
         rSButtonMaterialIconUno7.setText("Agregar");
         rSButtonMaterialIconUno7.setIcons(rojeru_san.efectos.ValoresEnum.ICONS.ADD_CIRCLE_OUTLINE);
@@ -359,32 +371,11 @@ public class Home extends javax.swing.JFrame {
                 .addContainerGap(35, Short.MAX_VALUE))
         );
 
-        rSTableMetro14.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null}
-            },
-            new String [] {
-                "Nombre", "Apellido(s)", "Dirección", "Correo", "Contacto", "Usuario", "Contraseña", "ID"
-            }
-        ) {
-            Class[] types = new Class [] {
-                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Integer.class
-            };
-
-            public Class getColumnClass(int columnIndex) {
-                return types [columnIndex];
-            }
-        });
-        jScrollPane5.setViewportView(rSTableMetro14);
-
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
         jPanel6Layout.setHorizontalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 615, Short.MAX_VALUE)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(rSButtonMaterialIconUno7, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -393,19 +384,20 @@ public class Home extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(rSButtonMaterialIconUno9, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
-            .addComponent(jScrollPane5, javax.swing.GroupLayout.DEFAULT_SIZE, 615, Short.MAX_VALUE)
+            .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel6Layout.createSequentialGroup()
                 .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(19, 19, 19)
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(rSButtonMaterialIconUno7, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(rSButtonMaterialIconUno8, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(rSButtonMaterialIconUno9, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane5, javax.swing.GroupLayout.DEFAULT_SIZE, 309, Short.MAX_VALUE))
+                .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 250, Short.MAX_VALUE)
+                .addGap(46, 46, 46))
         );
 
         javax.swing.GroupLayout panelPaciLayout = new javax.swing.GroupLayout(panelPaci);
@@ -427,23 +419,15 @@ public class Home extends javax.swing.JFrame {
 
         rSTableMetro12.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null}
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
             },
             new String [] {
-                "Nombre", "Apellido(s)", "Dirección", "Correo", "Contacto", "Usuario", "Contraseña", "ID"
+                "Title 1", "Title 2", "Title 3", "Title 4"
             }
-        ) {
-            Class[] types = new Class [] {
-                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Integer.class
-            };
-
-            public Class getColumnClass(int columnIndex) {
-                return types [columnIndex];
-            }
-        });
+        ));
         jScrollPane3.setViewportView(rSTableMetro12);
 
         rSButtonMaterialIconUno4.setText("Agregar");
@@ -503,13 +487,14 @@ public class Home extends javax.swing.JFrame {
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(19, 19, 19)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(rSButtonMaterialIconUno4, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(rSButtonMaterialIconUno5, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(rSButtonMaterialIconUno6, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 309, Short.MAX_VALUE))
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 246, Short.MAX_VALUE)
+                .addGap(50, 50, 50))
         );
 
         javax.swing.GroupLayout panelAuxLayout = new javax.swing.GroupLayout(panelAux);
@@ -543,16 +528,16 @@ public class Home extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void boton_odontologosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton_odontologosActionPerformed
+    private void boton_pacientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton_pacientesActionPerformed
 
         this.boton_home.setSelected(false);
-        this.boton_odontologos.setSelected(true);
-        this.boton_auxiliares.setSelected(false);
-        this.boton_pacientes.setSelected(false);
+        this.boton_pacientes.setSelected(true);
+        this.boton_perfil.setSelected(false);
+        this.boton_config.setSelected(false);
         panel.setPanelSlider(1, panelOdon, RSPanelsSlider.DIRECT.LEFT);
             
         
-    }//GEN-LAST:event_boton_odontologosActionPerformed
+    }//GEN-LAST:event_boton_pacientesActionPerformed
 
     private void boton_salirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton_salirActionPerformed
         salir();
@@ -560,30 +545,30 @@ public class Home extends javax.swing.JFrame {
 
     private void boton_homeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton_homeActionPerformed
         this.boton_home.setSelected(true);
-        this.boton_odontologos.setSelected(false);
-        this.boton_auxiliares.setSelected(false);
         this.boton_pacientes.setSelected(false);
+        this.boton_perfil.setSelected(false);
+        this.boton_config.setSelected(false);
 
         panel.setPanelSlider(1, panelHome, RSPanelsSlider.DIRECT.LEFT);          
     }//GEN-LAST:event_boton_homeActionPerformed
 
-    private void boton_auxiliaresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton_auxiliaresActionPerformed
+    private void boton_perfilActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton_perfilActionPerformed
         this.boton_home.setSelected(false);
-        this.boton_odontologos.setSelected(false);
-        this.boton_auxiliares.setSelected(true);
         this.boton_pacientes.setSelected(false);
+        this.boton_perfil.setSelected(true);
+        this.boton_config.setSelected(false);
             
         panel.setPanelSlider(1, panelAux, RSPanelsSlider.DIRECT.LEFT);          
-    }//GEN-LAST:event_boton_auxiliaresActionPerformed
+    }//GEN-LAST:event_boton_perfilActionPerformed
 
-    private void boton_pacientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton_pacientesActionPerformed
+    private void boton_configActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton_configActionPerformed
         this.boton_home.setSelected(false);
-        this.boton_odontologos.setSelected(false);
-        this.boton_auxiliares.setSelected(false);
-        this.boton_pacientes.setSelected(true);
+        this.boton_pacientes.setSelected(false);
+        this.boton_perfil.setSelected(false);
+        this.boton_config.setSelected(true);
         
         panel.setPanelSlider(1, panelPaci, RSPanelsSlider.DIRECT.LEFT);          
-    }//GEN-LAST:event_boton_pacientesActionPerformed
+    }//GEN-LAST:event_boton_configActionPerformed
 
     public void salir(){
         this.dispose();
@@ -615,6 +600,7 @@ public class Home extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(Home.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
+        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -626,10 +612,10 @@ public class Home extends javax.swing.JFrame {
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private RSMaterialComponent.RSButtonMaterialIconUno boton_auxiliares;
+    private RSMaterialComponent.RSButtonMaterialIconUno boton_config;
     private RSMaterialComponent.RSButtonMaterialIconUno boton_home;
-    private RSMaterialComponent.RSButtonMaterialIconUno boton_odontologos;
     private RSMaterialComponent.RSButtonMaterialIconUno boton_pacientes;
+    private RSMaterialComponent.RSButtonMaterialIconUno boton_perfil;
     private RSMaterialComponent.RSButtonMaterialIconUno boton_salir;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -642,9 +628,9 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
+    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
-    private javax.swing.JScrollPane jScrollPane5;
-    private javax.swing.JScrollPane jScrollPane6;
+    private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JSeparator jSeparator1;
     private rojerusan.RSPanelsSlider panel;
     private javax.swing.JPanel panelAux;
@@ -666,8 +652,8 @@ public class Home extends javax.swing.JFrame {
     private rojeru_san.rsdate.RSLabelHora rSLabelHora2;
     private rojeru_san.rsdate.RSLabelHora rSLabelHora3;
     private rojeru_san.rsdate.RSLabelHora rSLabelHora4;
+    private rojerusan.RSTableMetro1 rSTableMetro11;
     private rojerusan.RSTableMetro1 rSTableMetro12;
-    private rojerusan.RSTableMetro1 rSTableMetro14;
-    private rojerusan.RSTableMetro1 rSTableMetro15;
+    private rojerusan.RSTableMetro1 rSTableMetro13;
     // End of variables declaration//GEN-END:variables
 }
