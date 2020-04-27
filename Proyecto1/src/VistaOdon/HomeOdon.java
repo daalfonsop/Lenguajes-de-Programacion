@@ -51,7 +51,6 @@ public class HomeOdon extends javax.swing.JPanel {
         rSTableMetro11 = new rojerusan.RSTableMetro1();
         rSButtonMaterialIconUno1 = new RSMaterialComponent.RSButtonMaterialIconUno();
         rSButtonMaterialIconUno2 = new RSMaterialComponent.RSButtonMaterialIconUno();
-        rSButtonMaterialIconUno3 = new RSMaterialComponent.RSButtonMaterialIconUno();
         jPanel3 = new javax.swing.JPanel();
         rSLabelHora2 = new rojeru_san.rsdate.RSLabelHora();
         jLabel2 = new javax.swing.JLabel();
@@ -61,7 +60,6 @@ public class HomeOdon extends javax.swing.JPanel {
         rSTableMetro13 = new rojerusan.RSTableMetro1();
         rSButtonMaterialIconUno7 = new RSMaterialComponent.RSButtonMaterialIconUno();
         rSButtonMaterialIconUno8 = new RSMaterialComponent.RSButtonMaterialIconUno();
-        rSButtonMaterialIconUno9 = new RSMaterialComponent.RSButtonMaterialIconUno();
         jPanel7 = new javax.swing.JPanel();
         rSLabelHora4 = new rojeru_san.rsdate.RSLabelHora();
         jLabel4 = new javax.swing.JLabel();
@@ -71,7 +69,6 @@ public class HomeOdon extends javax.swing.JPanel {
         rSTableMetro12 = new rojerusan.RSTableMetro1();
         rSButtonMaterialIconUno4 = new RSMaterialComponent.RSButtonMaterialIconUno();
         rSButtonMaterialIconUno5 = new RSMaterialComponent.RSButtonMaterialIconUno();
-        rSButtonMaterialIconUno6 = new RSMaterialComponent.RSButtonMaterialIconUno();
         jPanel5 = new javax.swing.JPanel();
         rSLabelHora3 = new rojeru_san.rsdate.RSLabelHora();
         jLabel3 = new javax.swing.JLabel();
@@ -231,9 +228,6 @@ public class HomeOdon extends javax.swing.JPanel {
         rSButtonMaterialIconUno2.setText("Modificar");
         rSButtonMaterialIconUno2.setIcons(rojeru_san.efectos.ValoresEnum.ICONS.CACHED);
 
-        rSButtonMaterialIconUno3.setText("Eliminar");
-        rSButtonMaterialIconUno3.setIcons(rojeru_san.efectos.ValoresEnum.ICONS.DELETE);
-
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -244,9 +238,7 @@ public class HomeOdon extends javax.swing.JPanel {
                 .addComponent(rSButtonMaterialIconUno1, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(rSButtonMaterialIconUno2, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(rSButtonMaterialIconUno3, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addGap(131, 131, 131))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -254,8 +246,7 @@ public class HomeOdon extends javax.swing.JPanel {
                 .addGap(107, 107, 107)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(rSButtonMaterialIconUno1, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(rSButtonMaterialIconUno2, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(rSButtonMaterialIconUno3, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(rSButtonMaterialIconUno2, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 243, Short.MAX_VALUE)
                 .addGap(53, 53, 53))
@@ -332,9 +323,6 @@ public class HomeOdon extends javax.swing.JPanel {
         rSButtonMaterialIconUno8.setText("Modificar");
         rSButtonMaterialIconUno8.setIcons(rojeru_san.efectos.ValoresEnum.ICONS.CACHED);
 
-        rSButtonMaterialIconUno9.setText("Eliminar");
-        rSButtonMaterialIconUno9.setIcons(rojeru_san.efectos.ValoresEnum.ICONS.DELETE);
-
         jPanel7.setBackground(new java.awt.Color(0, 112, 192));
 
         rSLabelHora4.setForeground(new java.awt.Color(255, 255, 255));
@@ -374,9 +362,7 @@ public class HomeOdon extends javax.swing.JPanel {
                 .addComponent(rSButtonMaterialIconUno7, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(rSButtonMaterialIconUno8, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(rSButtonMaterialIconUno9, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addGap(131, 131, 131))
             .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanel6Layout.setVerticalGroup(
@@ -386,8 +372,7 @@ public class HomeOdon extends javax.swing.JPanel {
                 .addGap(19, 19, 19)
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(rSButtonMaterialIconUno7, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(rSButtonMaterialIconUno8, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(rSButtonMaterialIconUno9, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(rSButtonMaterialIconUno8, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 250, Short.MAX_VALUE)
                 .addGap(46, 46, 46))
@@ -429,9 +414,6 @@ public class HomeOdon extends javax.swing.JPanel {
         rSButtonMaterialIconUno5.setText("Modificar");
         rSButtonMaterialIconUno5.setIcons(rojeru_san.efectos.ValoresEnum.ICONS.CACHED);
 
-        rSButtonMaterialIconUno6.setText("Eliminar");
-        rSButtonMaterialIconUno6.setIcons(rojeru_san.efectos.ValoresEnum.ICONS.DELETE);
-
         jPanel5.setBackground(new java.awt.Color(0, 112, 192));
 
         rSLabelHora3.setForeground(new java.awt.Color(255, 255, 255));
@@ -471,9 +453,7 @@ public class HomeOdon extends javax.swing.JPanel {
                 .addComponent(rSButtonMaterialIconUno4, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(rSButtonMaterialIconUno5, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(rSButtonMaterialIconUno6, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addGap(131, 131, 131))
             .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanel4Layout.setVerticalGroup(
@@ -483,8 +463,7 @@ public class HomeOdon extends javax.swing.JPanel {
                 .addGap(19, 19, 19)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(rSButtonMaterialIconUno4, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(rSButtonMaterialIconUno5, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(rSButtonMaterialIconUno6, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(rSButtonMaterialIconUno5, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 246, Short.MAX_VALUE)
                 .addGap(50, 50, 50))
@@ -590,13 +569,10 @@ public class HomeOdon extends javax.swing.JPanel {
     private rojeru_san.rspanel.RSPanelGradiente panele;
     private RSMaterialComponent.RSButtonMaterialIconUno rSButtonMaterialIconUno1;
     private RSMaterialComponent.RSButtonMaterialIconUno rSButtonMaterialIconUno2;
-    private RSMaterialComponent.RSButtonMaterialIconUno rSButtonMaterialIconUno3;
     private RSMaterialComponent.RSButtonMaterialIconUno rSButtonMaterialIconUno4;
     private RSMaterialComponent.RSButtonMaterialIconUno rSButtonMaterialIconUno5;
-    private RSMaterialComponent.RSButtonMaterialIconUno rSButtonMaterialIconUno6;
     private RSMaterialComponent.RSButtonMaterialIconUno rSButtonMaterialIconUno7;
     private RSMaterialComponent.RSButtonMaterialIconUno rSButtonMaterialIconUno8;
-    private RSMaterialComponent.RSButtonMaterialIconUno rSButtonMaterialIconUno9;
     private rojeru_san.rsdate.RSCalendar rSCalendar2;
     private rojeru_san.rsdate.RSLabelHora rSLabelHora1;
     private rojeru_san.rsdate.RSLabelHora rSLabelHora2;

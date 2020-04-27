@@ -291,9 +291,7 @@
                           <Component id="rSButtonMaterialIconUno1" min="-2" pref="103" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Component id="rSButtonMaterialIconUno2" min="-2" pref="103" max="-2" attributes="0"/>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="rSButtonMaterialIconUno3" min="-2" pref="103" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="131" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -304,7 +302,6 @@
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="rSButtonMaterialIconUno1" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
                               <Component id="rSButtonMaterialIconUno2" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
-                              <Component id="rSButtonMaterialIconUno3" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="jScrollPane2" pref="243" max="32767" attributes="0"/>
@@ -348,14 +345,6 @@
                     <Property name="text" type="java.lang.String" value="Modificar"/>
                     <Property name="icons" type="rojeru_san.efectos.ValoresEnum$ICONS" editor="org.netbeans.modules.form.editors.EnumEditor">
                       <Value id="CACHED"/>
-                    </Property>
-                  </Properties>
-                </Component>
-                <Component class="RSMaterialComponent.RSButtonMaterialIconUno" name="rSButtonMaterialIconUno3">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="Eliminar"/>
-                    <Property name="icons" type="rojeru_san.efectos.ValoresEnum$ICONS" editor="org.netbeans.modules.form.editors.EnumEditor">
-                      <Value id="DELETE"/>
                     </Property>
                   </Properties>
                 </Component>
@@ -455,9 +444,7 @@
                           <Component id="rSButtonMaterialIconUno7" min="-2" pref="103" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Component id="rSButtonMaterialIconUno8" min="-2" pref="103" max="-2" attributes="0"/>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="rSButtonMaterialIconUno9" min="-2" pref="103" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="131" max="-2" attributes="0"/>
                       </Group>
                       <Component id="jPanel7" alignment="0" max="32767" attributes="0"/>
                   </Group>
@@ -470,7 +457,6 @@
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="rSButtonMaterialIconUno7" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
                               <Component id="rSButtonMaterialIconUno8" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
-                              <Component id="rSButtonMaterialIconUno9" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" max="-2" attributes="0"/>
                           <Component id="jScrollPane4" pref="250" max="32767" attributes="0"/>
@@ -514,14 +500,6 @@
                     <Property name="text" type="java.lang.String" value="Modificar"/>
                     <Property name="icons" type="rojeru_san.efectos.ValoresEnum$ICONS" editor="org.netbeans.modules.form.editors.EnumEditor">
                       <Value id="CACHED"/>
-                    </Property>
-                  </Properties>
-                </Component>
-                <Component class="RSMaterialComponent.RSButtonMaterialIconUno" name="rSButtonMaterialIconUno9">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="Eliminar"/>
-                    <Property name="icons" type="rojeru_san.efectos.ValoresEnum$ICONS" editor="org.netbeans.modules.form.editors.EnumEditor">
-                      <Value id="DELETE"/>
                     </Property>
                   </Properties>
                 </Component>
@@ -621,9 +599,7 @@
                           <Component id="rSButtonMaterialIconUno4" min="-2" pref="103" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Component id="rSButtonMaterialIconUno5" min="-2" pref="103" max="-2" attributes="0"/>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="rSButtonMaterialIconUno6" min="-2" pref="103" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="131" max="-2" attributes="0"/>
                       </Group>
                       <Component id="jPanel5" alignment="0" max="32767" attributes="0"/>
                   </Group>
@@ -636,7 +612,6 @@
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="rSButtonMaterialIconUno4" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
                               <Component id="rSButtonMaterialIconUno5" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
-                              <Component id="rSButtonMaterialIconUno6" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="jScrollPane3" pref="246" max="32767" attributes="0"/>
@@ -680,14 +655,6 @@
                     <Property name="text" type="java.lang.String" value="Modificar"/>
                     <Property name="icons" type="rojeru_san.efectos.ValoresEnum$ICONS" editor="org.netbeans.modules.form.editors.EnumEditor">
                       <Value id="CACHED"/>
-                    </Property>
-                  </Properties>
-                </Component>
-                <Component class="RSMaterialComponent.RSButtonMaterialIconUno" name="rSButtonMaterialIconUno6">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="Eliminar"/>
-                    <Property name="icons" type="rojeru_san.efectos.ValoresEnum$ICONS" editor="org.netbeans.modules.form.editors.EnumEditor">
-                      <Value id="DELETE"/>
                     </Property>
                   </Properties>
                 </Component>

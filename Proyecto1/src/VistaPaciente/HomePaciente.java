@@ -39,22 +39,20 @@ public class HomePaciente extends javax.swing.JPanel {
         rSLabelHora1 = new rojeru_san.rsdate.RSLabelHora();
         jLabel1 = new javax.swing.JLabel();
         panelOdon = new javax.swing.JPanel();
-        jPanel1 = new javax.swing.JPanel();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        rSTableMetro11 = new rojerusan.RSTableMetro1();
-        rSButtonMaterialIconUno1 = new RSMaterialComponent.RSButtonMaterialIconUno();
-        rSButtonMaterialIconUno2 = new RSMaterialComponent.RSButtonMaterialIconUno();
-        rSButtonMaterialIconUno3 = new RSMaterialComponent.RSButtonMaterialIconUno();
-        jPanel3 = new javax.swing.JPanel();
-        rSLabelHora2 = new rojeru_san.rsdate.RSLabelHora();
-        jLabel2 = new javax.swing.JLabel();
+        jPanel8 = new javax.swing.JPanel();
+        jScrollPane5 = new javax.swing.JScrollPane();
+        rSTableMetro14 = new rojerusan.RSTableMetro1();
+        rSButtonMaterialIconUno10 = new RSMaterialComponent.RSButtonMaterialIconUno();
+        rSButtonMaterialIconUno11 = new RSMaterialComponent.RSButtonMaterialIconUno();
+        jPanel9 = new javax.swing.JPanel();
+        rSLabelHora5 = new rojeru_san.rsdate.RSLabelHora();
+        jLabel5 = new javax.swing.JLabel();
         panelPaci = new javax.swing.JPanel();
         jPanel6 = new javax.swing.JPanel();
         jScrollPane4 = new javax.swing.JScrollPane();
         rSTableMetro13 = new rojerusan.RSTableMetro1();
         rSButtonMaterialIconUno7 = new RSMaterialComponent.RSButtonMaterialIconUno();
         rSButtonMaterialIconUno8 = new RSMaterialComponent.RSButtonMaterialIconUno();
-        rSButtonMaterialIconUno9 = new RSMaterialComponent.RSButtonMaterialIconUno();
         jPanel7 = new javax.swing.JPanel();
         rSLabelHora4 = new rojeru_san.rsdate.RSLabelHora();
         jLabel4 = new javax.swing.JLabel();
@@ -64,7 +62,6 @@ public class HomePaciente extends javax.swing.JPanel {
         rSTableMetro12 = new rojerusan.RSTableMetro1();
         rSButtonMaterialIconUno4 = new RSMaterialComponent.RSButtonMaterialIconUno();
         rSButtonMaterialIconUno5 = new RSMaterialComponent.RSButtonMaterialIconUno();
-        rSButtonMaterialIconUno6 = new RSMaterialComponent.RSButtonMaterialIconUno();
         jPanel5 = new javax.swing.JPanel();
         rSLabelHora3 = new rojeru_san.rsdate.RSLabelHora();
         jLabel3 = new javax.swing.JLabel();
@@ -133,9 +130,9 @@ public class HomePaciente extends javax.swing.JPanel {
 
         panelOdon.setName("panelOdon"); // NOI18N
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel8.setBackground(new java.awt.Color(255, 255, 255));
 
-        rSTableMetro11.setModel(new javax.swing.table.DefaultTableModel(
+        rSTableMetro14.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -146,88 +143,78 @@ public class HomePaciente extends javax.swing.JPanel {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        jScrollPane2.setViewportView(rSTableMetro11);
+        jScrollPane5.setViewportView(rSTableMetro14);
 
-        rSButtonMaterialIconUno1.setText("Agregar");
-        rSButtonMaterialIconUno1.setIcons(rojeru_san.efectos.ValoresEnum.ICONS.ADD_CIRCLE_OUTLINE);
+        rSButtonMaterialIconUno10.setText("Agregar");
+        rSButtonMaterialIconUno10.setIcons(rojeru_san.efectos.ValoresEnum.ICONS.ADD_CIRCLE_OUTLINE);
 
-        rSButtonMaterialIconUno2.setText("Modificar");
-        rSButtonMaterialIconUno2.setIcons(rojeru_san.efectos.ValoresEnum.ICONS.CACHED);
+        rSButtonMaterialIconUno11.setText("Modificar");
+        rSButtonMaterialIconUno11.setIcons(rojeru_san.efectos.ValoresEnum.ICONS.CACHED);
 
-        rSButtonMaterialIconUno3.setText("Eliminar");
-        rSButtonMaterialIconUno3.setIcons(rojeru_san.efectos.ValoresEnum.ICONS.DELETE);
+        jPanel9.setBackground(new java.awt.Color(0, 112, 192));
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 615, Short.MAX_VALUE)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(rSButtonMaterialIconUno1, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(rSButtonMaterialIconUno2, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(rSButtonMaterialIconUno3, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
+        rSLabelHora5.setForeground(new java.awt.Color(255, 255, 255));
+
+        jLabel5.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel5.setText("Citas");
+
+        javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
+        jPanel9.setLayout(jPanel9Layout);
+        jPanel9Layout.setHorizontalGroup(
+            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel9Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 203, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(rSLabelHora5, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(107, 107, 107)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(rSButtonMaterialIconUno1, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(rSButtonMaterialIconUno2, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(rSButtonMaterialIconUno3, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 243, Short.MAX_VALUE)
-                .addGap(53, 53, 53))
-        );
-
-        jPanel3.setBackground(new java.awt.Color(0, 112, 192));
-
-        rSLabelHora2.setForeground(new java.awt.Color(255, 255, 255));
-
-        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("Odontólogos");
-
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
+        jPanel9Layout.setVerticalGroup(
+            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel9Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 203, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 253, Short.MAX_VALUE)
-                .addComponent(rSLabelHora2, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(rSLabelHora2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(rSLabelHora5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(35, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
+        jPanel8.setLayout(jPanel8Layout);
+        jPanel8Layout.setHorizontalGroup(
+            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jScrollPane5, javax.swing.GroupLayout.DEFAULT_SIZE, 615, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel8Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(rSButtonMaterialIconUno10, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(rSButtonMaterialIconUno11, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(131, 131, 131))
+            .addComponent(jPanel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        jPanel8Layout.setVerticalGroup(
+            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel8Layout.createSequentialGroup()
+                .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(19, 19, 19)
+                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(rSButtonMaterialIconUno10, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(rSButtonMaterialIconUno11, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane5, javax.swing.GroupLayout.DEFAULT_SIZE, 250, Short.MAX_VALUE)
+                .addGap(46, 46, 46))
         );
 
         javax.swing.GroupLayout panelOdonLayout = new javax.swing.GroupLayout(panelOdon);
         panelOdon.setLayout(panelOdonLayout);
         panelOdonLayout.setHorizontalGroup(
             panelOdonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(panelOdonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         panelOdonLayout.setVerticalGroup(
             panelOdonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelOdonLayout.createSequentialGroup()
-                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 350, Short.MAX_VALUE))
-            .addGroup(panelOdonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(jPanel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         panel.add(panelOdon, "card4");
@@ -254,9 +241,6 @@ public class HomePaciente extends javax.swing.JPanel {
 
         rSButtonMaterialIconUno8.setText("Modificar");
         rSButtonMaterialIconUno8.setIcons(rojeru_san.efectos.ValoresEnum.ICONS.CACHED);
-
-        rSButtonMaterialIconUno9.setText("Eliminar");
-        rSButtonMaterialIconUno9.setIcons(rojeru_san.efectos.ValoresEnum.ICONS.DELETE);
 
         jPanel7.setBackground(new java.awt.Color(0, 112, 192));
 
@@ -297,9 +281,7 @@ public class HomePaciente extends javax.swing.JPanel {
                 .addComponent(rSButtonMaterialIconUno7, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(rSButtonMaterialIconUno8, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(rSButtonMaterialIconUno9, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addGap(131, 131, 131))
             .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanel6Layout.setVerticalGroup(
@@ -309,8 +291,7 @@ public class HomePaciente extends javax.swing.JPanel {
                 .addGap(19, 19, 19)
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(rSButtonMaterialIconUno7, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(rSButtonMaterialIconUno8, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(rSButtonMaterialIconUno9, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(rSButtonMaterialIconUno8, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 250, Short.MAX_VALUE)
                 .addGap(46, 46, 46))
@@ -352,9 +333,6 @@ public class HomePaciente extends javax.swing.JPanel {
         rSButtonMaterialIconUno5.setText("Modificar");
         rSButtonMaterialIconUno5.setIcons(rojeru_san.efectos.ValoresEnum.ICONS.CACHED);
 
-        rSButtonMaterialIconUno6.setText("Eliminar");
-        rSButtonMaterialIconUno6.setIcons(rojeru_san.efectos.ValoresEnum.ICONS.DELETE);
-
         jPanel5.setBackground(new java.awt.Color(0, 112, 192));
 
         rSLabelHora3.setForeground(new java.awt.Color(255, 255, 255));
@@ -394,9 +372,7 @@ public class HomePaciente extends javax.swing.JPanel {
                 .addComponent(rSButtonMaterialIconUno4, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(rSButtonMaterialIconUno5, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(rSButtonMaterialIconUno6, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addGap(131, 131, 131))
             .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanel4Layout.setVerticalGroup(
@@ -406,8 +382,7 @@ public class HomePaciente extends javax.swing.JPanel {
                 .addGap(19, 19, 19)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(rSButtonMaterialIconUno4, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(rSButtonMaterialIconUno5, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(rSButtonMaterialIconUno6, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(rSButtonMaterialIconUno5, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 246, Short.MAX_VALUE)
                 .addGap(50, 50, 50))
@@ -567,19 +542,19 @@ public class HomePaciente extends javax.swing.JPanel {
     private RSMaterialComponent.RSButtonMaterialIconUno boton_perfil;
     private RSMaterialComponent.RSButtonMaterialIconUno boton_salir;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
-    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JPanel jPanel8;
+    private javax.swing.JPanel jPanel9;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JSeparator jSeparator1;
     private rojerusan.RSPanelsSlider panel;
     private javax.swing.JPanel panelAux;
@@ -587,22 +562,19 @@ public class HomePaciente extends javax.swing.JPanel {
     private javax.swing.JPanel panelOdon;
     private javax.swing.JPanel panelPaci;
     private rojeru_san.rspanel.RSPanelGradiente panele;
-    private RSMaterialComponent.RSButtonMaterialIconUno rSButtonMaterialIconUno1;
-    private RSMaterialComponent.RSButtonMaterialIconUno rSButtonMaterialIconUno2;
-    private RSMaterialComponent.RSButtonMaterialIconUno rSButtonMaterialIconUno3;
+    private RSMaterialComponent.RSButtonMaterialIconUno rSButtonMaterialIconUno10;
+    private RSMaterialComponent.RSButtonMaterialIconUno rSButtonMaterialIconUno11;
     private RSMaterialComponent.RSButtonMaterialIconUno rSButtonMaterialIconUno4;
     private RSMaterialComponent.RSButtonMaterialIconUno rSButtonMaterialIconUno5;
-    private RSMaterialComponent.RSButtonMaterialIconUno rSButtonMaterialIconUno6;
     private RSMaterialComponent.RSButtonMaterialIconUno rSButtonMaterialIconUno7;
     private RSMaterialComponent.RSButtonMaterialIconUno rSButtonMaterialIconUno8;
-    private RSMaterialComponent.RSButtonMaterialIconUno rSButtonMaterialIconUno9;
     private rojeru_san.rsdate.RSCalendar rSCalendar2;
     private rojeru_san.rsdate.RSLabelHora rSLabelHora1;
-    private rojeru_san.rsdate.RSLabelHora rSLabelHora2;
     private rojeru_san.rsdate.RSLabelHora rSLabelHora3;
     private rojeru_san.rsdate.RSLabelHora rSLabelHora4;
-    private rojerusan.RSTableMetro1 rSTableMetro11;
+    private rojeru_san.rsdate.RSLabelHora rSLabelHora5;
     private rojerusan.RSTableMetro1 rSTableMetro12;
     private rojerusan.RSTableMetro1 rSTableMetro13;
+    private rojerusan.RSTableMetro1 rSTableMetro14;
     // End of variables declaration//GEN-END:variables
 }

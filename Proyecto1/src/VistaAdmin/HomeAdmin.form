@@ -277,8 +277,9 @@
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="jPanel3" alignment="0" max="32767" attributes="0"/>
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace pref="260" max="32767" attributes="0"/>
+                      <Group type="102" alignment="1" attributes="0">
+                          <Component id="persona" min="-2" pref="225" max="-2" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
                           <Component id="rSButtonMaterialIconUno1" min="-2" pref="103" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Component id="rSButtonMaterialIconUno2" min="-2" pref="103" max="-2" attributes="0"/>
@@ -286,18 +287,19 @@
                           <Component id="rSButtonMaterialIconUno3" min="-2" pref="103" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                       </Group>
-                      <Component id="jScrollPane6" alignment="0" pref="615" max="32767" attributes="0"/>
+                      <Component id="jScrollPane6" alignment="0" pref="0" max="32767" attributes="0"/>
                   </Group>
                 </DimensionLayout>
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <Component id="jPanel3" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="rSButtonMaterialIconUno1" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
                               <Component id="rSButtonMaterialIconUno2" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
                               <Component id="rSButtonMaterialIconUno3" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
+                              <Component id="persona" alignment="3" pref="0" max="32767" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="jScrollPane6" pref="309" max="32767" attributes="0"/>
@@ -346,7 +348,7 @@
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="jLabel2" min="-2" pref="203" max="-2" attributes="0"/>
-                              <EmptySpace max="32767" attributes="0"/>
+                              <EmptySpace pref="253" max="32767" attributes="0"/>
                               <Component id="rSLabelHora2" min="-2" pref="139" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                           </Group>
@@ -414,6 +416,12 @@
                     </Component>
                   </SubComponents>
                 </Container>
+                <Component class="necesario.TextField" name="persona">
+                  <Properties>
+                    <Property name="editable" type="boolean" value="false"/>
+                    <Property name="placeholder" type="java.lang.String" value="DefaultUsuario"/>
+                  </Properties>
+                </Component>
               </SubComponents>
             </Container>
           </SubComponents>
@@ -453,6 +461,7 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="jPanel7" alignment="0" max="32767" attributes="0"/>
                       <Group type="102" alignment="1" attributes="0">
+                          <Component id="persona1" min="-2" pref="225" max="-2" attributes="0"/>
                           <EmptySpace max="32767" attributes="0"/>
                           <Component id="rSButtonMaterialIconUno7" min="-2" pref="103" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
@@ -473,6 +482,7 @@
                               <Component id="rSButtonMaterialIconUno7" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
                               <Component id="rSButtonMaterialIconUno8" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
                               <Component id="rSButtonMaterialIconUno9" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
+                              <Component id="persona1" alignment="3" pref="0" max="32767" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="jScrollPane5" pref="309" max="32767" attributes="0"/>
@@ -586,6 +596,12 @@
                     </Component>
                   </SubComponents>
                 </Container>
+                <Component class="necesario.TextField" name="persona1">
+                  <Properties>
+                    <Property name="editable" type="boolean" value="false"/>
+                    <Property name="placeholder" type="java.lang.String" value="DefaultUsuario"/>
+                  </Properties>
+                </Component>
               </SubComponents>
             </Container>
           </SubComponents>
@@ -623,9 +639,10 @@
               <Layout>
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jScrollPane3" alignment="0" pref="615" max="32767" attributes="0"/>
+                      <Component id="jScrollPane3" alignment="0" max="32767" attributes="0"/>
                       <Group type="102" alignment="1" attributes="0">
-                          <EmptySpace max="32767" attributes="0"/>
+                          <Component id="persona2" min="-2" pref="225" max="-2" attributes="0"/>
+                          <EmptySpace pref="35" max="32767" attributes="0"/>
                           <Component id="rSButtonMaterialIconUno4" min="-2" pref="103" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Component id="rSButtonMaterialIconUno5" min="-2" pref="103" max="-2" attributes="0"/>
@@ -645,14 +662,21 @@
                               <Component id="rSButtonMaterialIconUno4" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
                               <Component id="rSButtonMaterialIconUno5" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
                               <Component id="rSButtonMaterialIconUno6" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
+                              <Component id="persona2" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jScrollPane3" pref="309" max="32767" attributes="0"/>
+                          <Component id="jScrollPane3" pref="308" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
               </Layout>
               <SubComponents>
+                <Component class="necesario.TextField" name="persona2">
+                  <Properties>
+                    <Property name="editable" type="boolean" value="false"/>
+                    <Property name="placeholder" type="java.lang.String" value="DefaultUsuario"/>
+                  </Properties>
+                </Component>
                 <Container class="javax.swing.JScrollPane" name="jScrollPane3">
                   <AuxValues>
                     <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
