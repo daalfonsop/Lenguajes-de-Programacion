@@ -57,7 +57,7 @@ public class Home extends javax.swing.JFrame {
         rSLabelHora2 = new rojeru_san.rsdate.RSLabelHora();
         jLabel2 = new javax.swing.JLabel();
         jScrollPane6 = new javax.swing.JScrollPane();
-        rSTableMetro15 = new rojerusan.RSTableMetro1();
+        Table = new rojerusan.RSTableMetro1();
         panelPaci = new javax.swing.JPanel();
         jPanel6 = new javax.swing.JPanel();
         rSButtonMaterialIconUno7 = new RSMaterialComponent.RSButtonMaterialIconUno();
@@ -219,6 +219,11 @@ public class Home extends javax.swing.JFrame {
 
         rSButtonMaterialIconUno1.setText("Agregar");
         rSButtonMaterialIconUno1.setIcons(rojeru_san.efectos.ValoresEnum.ICONS.ADD_CIRCLE_OUTLINE);
+        rSButtonMaterialIconUno1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rSButtonMaterialIconUno1ActionPerformed(evt);
+            }
+        });
 
         rSButtonMaterialIconUno2.setText("Modificar");
         rSButtonMaterialIconUno2.setIcons(rojeru_san.efectos.ValoresEnum.ICONS.CACHED);
@@ -255,7 +260,7 @@ public class Home extends javax.swing.JFrame {
                 .addContainerGap(35, Short.MAX_VALUE))
         );
 
-        rSTableMetro15.setModel(new javax.swing.table.DefaultTableModel(
+        Table.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null, null, null},
                 {null, null, null, null, null, null, null, null},
@@ -274,7 +279,7 @@ public class Home extends javax.swing.JFrame {
                 return types [columnIndex];
             }
         });
-        jScrollPane6.setViewportView(rSTableMetro15);
+        jScrollPane6.setViewportView(Table);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -585,6 +590,10 @@ public class Home extends javax.swing.JFrame {
         panel.setPanelSlider(1, panelPaci, RSPanelsSlider.DIRECT.LEFT);          
     }//GEN-LAST:event_boton_pacientesActionPerformed
 
+    private void rSButtonMaterialIconUno1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rSButtonMaterialIconUno1ActionPerformed
+        new CrearUsuario().setVisible(true);
+    }//GEN-LAST:event_rSButtonMaterialIconUno1ActionPerformed
+
     public void salir(){
         this.dispose();
         new Login1().setVisible(true);
@@ -626,6 +635,7 @@ public class Home extends javax.swing.JFrame {
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private rojerusan.RSTableMetro1 Table;
     private RSMaterialComponent.RSButtonMaterialIconUno boton_auxiliares;
     private RSMaterialComponent.RSButtonMaterialIconUno boton_home;
     private RSMaterialComponent.RSButtonMaterialIconUno boton_odontologos;
@@ -668,6 +678,5 @@ public class Home extends javax.swing.JFrame {
     private rojeru_san.rsdate.RSLabelHora rSLabelHora4;
     private rojerusan.RSTableMetro1 rSTableMetro12;
     private rojerusan.RSTableMetro1 rSTableMetro14;
-    private rojerusan.RSTableMetro1 rSTableMetro15;
     // End of variables declaration//GEN-END:variables
 }

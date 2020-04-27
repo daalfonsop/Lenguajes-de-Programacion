@@ -49,7 +49,6 @@ public class LogicaUsuario {
                     usuario.setCedula(rs.getString(10));
                     usuario.setTipoUsuario(rs.getString(11));
                     ListaUsuarios.add(usuario); // en mi lista queda cargada toda la informacion
-                    
                 }
             }
             
@@ -60,6 +59,29 @@ public class LogicaUsuario {
             System.out.println("error en la consulta de la base de datos: "+ e.getMessage());
         }
         return null;
+    }
+    public void crearUsuario(String nombre, String apellido,String cedula,String correo,String numeroContacto,String apellid2,String pass,String usuario,String direccion,String tipoUsuario){
+        try {
+            conexion= Conexion.getConnection();
+            sentencias = conexion.prepareStatement("INSERT INTO usuarios(Nombre,PrimerApellido,SegundoApellido,Pass,Correo,Direccion,Usuario,NumeroContacto,Cedula,tipoUsuario) values(?,?,?,?,?,?,?,?,?,?)");
+            sentencias.setString(1, nombre);
+            sentencias.setString(2, apellido);
+            sentencias.setString(3, apellid2);
+            sentencias.setString(4, pass);
+            sentencias.setString(5, correo);
+            sentencias.setString(6, direccion);
+            sentencias.setString(7, usuario);
+            sentencias.setString(8, numeroContacto);
+            sentencias.setString(9, cedula);
+            sentencias.setString(10, tipoUsuario);
+            rs = sentencias.executeQuery();
+                if (rs != null) {
+                    System.out.println("Registro exitoso");
+                } 
+                
+            } catch (Exception e) {
+                System.out.println("error en la consulta de la base de datos: "+ e.getMessage());
+            } 
     }
     
 }
