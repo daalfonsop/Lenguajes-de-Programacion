@@ -7,6 +7,7 @@ package VistaAdmin;
 
 import Controlador.LogicaUsuario;
 import Modelo.Conexion;
+import Vista.Login1;
 import com.mysql.jdbc.Connection;
 import com.mysql.jdbc.Statement;
 import com.placeholder.PlaceHolder;
@@ -27,10 +28,11 @@ public class CrearUsuario extends javax.swing.JPanel {
      * Creates new form CrearUsuario
      */
     private String nombre, apellido, cedula, correo, numeroContacto, apellid2, pass,repeatPass ,usuario, direccion, tipoUsuario;
-    
+    private Login1 nuevo;
     LogicaUsuario logica = new LogicaUsuario();
-    public CrearUsuario() {
+    public CrearUsuario(Login1 nuevo) {
         initComponents();
+        this.nuevo=nuevo;
         holders();
     }
     /**
@@ -43,8 +45,6 @@ public class CrearUsuario extends javax.swing.JPanel {
     private void initComponents() {
 
         txt_correo = new javax.swing.JTextField();
-        boton_crear = new javax.swing.JButton();
-        boton_salir = new javax.swing.JButton();
         obligatorio = new javax.swing.JLabel();
         obligatorio1 = new javax.swing.JLabel();
         obligatorio2 = new javax.swing.JLabel();
@@ -65,9 +65,11 @@ public class CrearUsuario extends javax.swing.JPanel {
         txt_direccion = new javax.swing.JTextField();
         txt_contraseña = new javax.swing.JPasswordField();
         txt_repetirContraseña = new javax.swing.JPasswordField();
-        bx_tipo_usuario = new javax.swing.JComboBox();
         obligatorio9 = new javax.swing.JLabel();
         logo = new javax.swing.JLabel();
+        bx_tipo_usuario = new rojerusan.RSComboBox();
+        salir = new rojerusan.RSMaterialButtonRectangle();
+        crear = new rojerusan.RSMaterialButtonRectangle();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setPreferredSize(new java.awt.Dimension(558, 508));
@@ -79,22 +81,6 @@ public class CrearUsuario extends javax.swing.JPanel {
             }
         });
         add(txt_correo, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 300, 360, 31));
-
-        boton_crear.setText("Crear");
-        boton_crear.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                boton_crearActionPerformed(evt);
-            }
-        });
-        add(boton_crear, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 430, 210, -1));
-
-        boton_salir.setText("Regresar");
-        boton_salir.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                boton_salirActionPerformed(evt);
-            }
-        });
-        add(boton_salir, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 470, -1, -1));
 
         obligatorio.setForeground(new java.awt.Color(255, 0, 0));
         obligatorio.setText("*");
@@ -192,58 +178,38 @@ public class CrearUsuario extends javax.swing.JPanel {
         add(txt_contraseña, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 340, 360, 30));
         add(txt_repetirContraseña, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 380, 360, 30));
 
-        bx_tipo_usuario.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Tipo de Usuario:", "Odontologo", "Auxiliar", "Cliente" }));
-        add(bx_tipo_usuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 90, 150, -1));
-
         obligatorio9.setForeground(new java.awt.Color(255, 0, 0));
         obligatorio9.setText(" *");
         add(obligatorio9, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 140, 10, -1));
 
         logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/logoFrui.jpg"))); // NOI18N
         add(logo, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 0, 160, 140));
-    }// </editor-fold>//GEN-END:initComponents
 
-    private void boton_crearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton_crearActionPerformed
-        nombre = txt_nombres.getText();
-        apellido = txt_primerApellido.getText();
-        cedula = txt_cedula.getText();
-        correo = txt_correo.getText();
-        numeroContacto = txt_numeroContacto.getText();
-        apellid2 = txt_segundoApellido.getText(); //hrsgsrh
-        pass = txt_contraseña.getText();
-        repeatPass=txt_repetirContraseña.getText();
-        usuario = txt_usuario.getText();
-        direccion = txt_direccion.getText();
-        tipoUsuario = bx_tipo_usuario.getSelectedItem().toString();
-
-        if ((nombre.equals("Nombres")) || (pass.equals("Contraseña")) || (cedula.equals("Cédula"))
-                || (correo.equals("Correo electronico (personal o empresarial)")) || (direccion.equals("Dirección domicilio")) || (numeroContacto.equals("Numero de contacto"))
-                || (apellido.equals("Primer Apellido")) || (repeatPass.equals("Repita la Contraseña")) || (usuario.equals("Usuario"))
-                || (bx_tipo_usuario.getSelectedItem().equals(""))) {
-            
-        } else if (!pass.equals(repeatPass) ) {
-            System.out.println("contraseña errada");
-        } else {
-                logica.crearUsuario(nombre, apellido, cedula, correo, numeroContacto, apellid2, pass, usuario, direccion, tipoUsuario);
+        bx_tipo_usuario.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Odontologo", "Auxiliar", "Cliente" }));
+        bx_tipo_usuario.setToolTipText("Tipo de usuario");
+        bx_tipo_usuario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bx_tipo_usuarioActionPerformed(evt);
             }
-            System.out.println("registro exitoso");
-        this.txt_nombres.setText("Nombres");
-        this.txt_cedula.setText("Cédula");
-        this.txt_contraseña.setText("Contraseña");
-        this.txt_numeroContacto.setText("Numero de contacto");
-        this.txt_correo.setText("Correo electronico (personal o empresarial)");
-        this.txt_direccion.setText("Dirección domicilio");
-        this.txt_primerApellido.setText("Primer Apellido");
-        this.txt_segundoApellido.setText("Segundo Apellido");
-        this.txt_usuario.setText("Usuario");
-        this.txt_repetirContraseña.setText("contraseña");
-        
-        
-    }//GEN-LAST:event_boton_crearActionPerformed
+        });
+        add(bx_tipo_usuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 80, 150, -1));
 
-    private void boton_salirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton_salirActionPerformed
-        
-    }//GEN-LAST:event_boton_salirActionPerformed
+        salir.setText("Salir");
+        salir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                salirActionPerformed(evt);
+            }
+        });
+        add(salir, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 460, 110, 40));
+
+        crear.setText("Crear");
+        crear.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                crearActionPerformed(evt);
+            }
+        });
+        add(crear, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 420, 150, 40));
+    }// </editor-fold>//GEN-END:initComponents
 
     private void txt_usuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_usuarioActionPerformed
         // TODO add your handling code here:
@@ -292,6 +258,51 @@ public class CrearUsuario extends javax.swing.JPanel {
         }
     }//GEN-LAST:event_txt_segundoApellidoKeyTyped
 
+    private void bx_tipo_usuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bx_tipo_usuarioActionPerformed
+        
+    }//GEN-LAST:event_bx_tipo_usuarioActionPerformed
+
+    private void salirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_salirActionPerformed
+        nuevo.dispose();
+        
+    }//GEN-LAST:event_salirActionPerformed
+
+    private void crearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_crearActionPerformed
+        nombre = txt_nombres.getText();
+        apellido = txt_primerApellido.getText();
+        cedula = txt_cedula.getText();
+        correo = txt_correo.getText();
+        numeroContacto = txt_numeroContacto.getText();
+        apellid2 = txt_segundoApellido.getText(); //hrsgsrh
+        pass = txt_contraseña.getText();
+        repeatPass=txt_repetirContraseña.getText();
+        usuario = txt_usuario.getText();
+        direccion = txt_direccion.getText();
+        tipoUsuario = bx_tipo_usuario.getSelectedItem().toString();
+
+        if ((nombre.equals("Nombres")) || (pass.equals("Contraseña")) || (cedula.equals("Cédula"))
+            || (correo.equals("Correo electronico (personal o empresarial)")) || (direccion.equals("Dirección domicilio")) || (numeroContacto.equals("Numero de contacto"))
+            || (apellido.equals("Primer Apellido")) || (repeatPass.equals("Repita la Contraseña")) || (usuario.equals("Usuario"))
+            || (bx_tipo_usuario.getSelectedItem().equals(""))) {
+
+        } else if (!pass.equals(repeatPass) ) {
+            System.out.println("contraseña errada");
+        } else {
+            logica.crearUsuario(nombre, apellido, cedula, correo, numeroContacto, apellid2, pass, usuario, direccion, tipoUsuario);            
+        }
+        
+        this.txt_nombres.setText("Nombres");
+        this.txt_cedula.setText("Cédula");
+        this.txt_contraseña.setText("Contraseña");
+        this.txt_numeroContacto.setText("Numero de contacto");
+        this.txt_correo.setText("Correo electronico (personal o empresarial)");
+        this.txt_direccion.setText("Dirección domicilio");
+        this.txt_primerApellido.setText("Primer Apellido");
+        this.txt_segundoApellido.setText("Segundo Apellido");
+        this.txt_usuario.setText("Usuario");
+        this.txt_repetirContraseña.setText("contraseña");
+    }//GEN-LAST:event_crearActionPerformed
+
     
 
     public void holders() {
@@ -309,9 +320,8 @@ public class CrearUsuario extends javax.swing.JPanel {
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel ayuda;
-    private javax.swing.JButton boton_crear;
-    private javax.swing.JButton boton_salir;
-    private javax.swing.JComboBox bx_tipo_usuario;
+    private rojerusan.RSComboBox bx_tipo_usuario;
+    private rojerusan.RSMaterialButtonRectangle crear;
     private javax.swing.JLabel label_creandoUsuario;
     private javax.swing.JLabel logo;
     private javax.swing.JLabel obligatorio;
@@ -324,6 +334,7 @@ public class CrearUsuario extends javax.swing.JPanel {
     private javax.swing.JLabel obligatorio7;
     private javax.swing.JLabel obligatorio8;
     private javax.swing.JLabel obligatorio9;
+    private rojerusan.RSMaterialButtonRectangle salir;
     private javax.swing.JTextField txt_cedula;
     private javax.swing.JPasswordField txt_contraseña;
     private javax.swing.JTextField txt_correo;

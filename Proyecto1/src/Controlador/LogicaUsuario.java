@@ -9,7 +9,9 @@ import Modelo.Conexion;
 import Modelo.Usuario;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import com.mysql.jdbc.Statement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 
 /**
@@ -20,6 +22,7 @@ public class LogicaUsuario {
     ArrayList <Usuario> ListaUsuarios = new ArrayList<>();
     private Connection conexion= null;
     private PreparedStatement sentencias;
+    private Statement stmt = null;
     private ResultSet rs;
     private Usuario usuario;
     
@@ -63,25 +66,22 @@ public class LogicaUsuario {
     public void crearUsuario(String nombre, String apellido,String cedula,String correo,String numeroContacto,String apellid2,String pass,String usuario,String direccion,String tipoUsuario){
         try {
             conexion= Conexion.getConnection();
-            sentencias = conexion.prepareStatement("INSERT INTO usuarios(Nombre,PrimerApellido,SegundoApellido,Pass,Correo,Direccion,Usuario,NumeroContacto,Cedula,tipoUsuario) values(?,?,?,?,?,?,?,?,?,?)");
-            sentencias.setString(1, nombre);
-            sentencias.setString(2, apellido);
-            sentencias.setString(3, apellid2);
-            sentencias.setString(4, pass);
-            sentencias.setString(5, correo);
-            sentencias.setString(6, direccion);
-            sentencias.setString(7, usuario);
-            sentencias.setString(8, numeroContacto);
-            sentencias.setString(9, cedula);
-            sentencias.setString(10, tipoUsuario);
-            rs = sentencias.executeQuery();
-                if (rs != null) {
+            stmt = (Statement) conexion.createStatement();
+            if (conexion != null) {
+                    stmt.executeUpdate("INSERT INTO usuarios(Nombre,PrimerApellido,SegundoApellido,Pass,Correo,Direccion,Usuario,NumeroContacto,Cedula,tipoUsuario) values("+"'"+ nombre + "','" + apellido + "','"
+                        + apellid2 + "','" + pass + "','" + correo + "','" + direccion + "','" + usuario + "','" + numeroContacto + "','"
+                        + cedula + "','" + tipoUsuario + "')");
                     System.out.println("Registro exitoso");
-                } 
+                }
+            else{
+                System.out.println("conexion fallida");
+            }
                 
-            } catch (Exception e) {
+            } catch (SQLException e) {
                 System.out.println("error en la consulta de la base de datos: "+ e.getMessage());
-            } 
+            } catch(Exception e){
+                System.out.println("error en la consulta de la base de datos: "+ e.getMessage());
+            }
     }
     
 }

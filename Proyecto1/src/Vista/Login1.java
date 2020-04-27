@@ -7,6 +7,7 @@ package Vista;
 
 import Controlador.LogicaUsuario;
 import Modelo.Usuario;
+import VistaAdmin.CrearUsuario;
 import VistaAdmin.HomeAdmin;
 import VistaOdon.HomeOdon;
 import VistaPaciente.HomePaciente;
@@ -25,6 +26,8 @@ public class Login1 extends javax.swing.JFrame {
     private HomeAdmin homeAdmin;
     private HomeOdon homeOdon;
     private HomePaciente homePaciente;
+    private CrearUsuario crearUsuario;
+    
     public Login1() {
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setName("pricipalJFrame");
@@ -33,6 +36,15 @@ public class Login1 extends javax.swing.JFrame {
         pack(); 
         setLocationRelativeTo(null);//mirat
         iniciar(); 
+    }
+    public Login1(Login1 login){
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
+        setName("Nuevo Usuario");
+        setTitle("Fruithz");
+        NuevoUsuario();
+        setResizable(false);
+        pack();
+        setLocationRelativeTo(null);
     }
 
     /**
@@ -130,6 +142,13 @@ public class Login1 extends javax.swing.JFrame {
         add(homePaciente);
         pack();
         setLocationRelativeTo(null);         
+    }
+    public void NuevoUsuario(){
+        crearUsuario = new CrearUsuario(this);
+        crearUsuario.setVisible(true);
+        add(crearUsuario);
+        pack();
+        setLocationRelativeTo(null);
     }
     
     

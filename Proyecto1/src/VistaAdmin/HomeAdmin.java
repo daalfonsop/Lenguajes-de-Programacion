@@ -583,7 +583,7 @@ public class HomeAdmin extends javax.swing.JPanel {
     }//GEN-LAST:event_boton_pacientesActionPerformed
 
     private void rSButtonMaterialIconUno1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rSButtonMaterialIconUno1ActionPerformed
-        new CrearUsuario().setVisible(true);
+        new Login1(login).setVisible(true);
     }//GEN-LAST:event_rSButtonMaterialIconUno1ActionPerformed
     
 
