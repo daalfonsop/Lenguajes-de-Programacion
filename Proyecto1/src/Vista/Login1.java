@@ -28,6 +28,7 @@ public class Login1 extends javax.swing.JFrame {
     private HomePaciente homePaciente;
     private CrearUsuario crearUsuario;
     
+    
     public Login1() {
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setName("pricipalJFrame");
@@ -46,6 +47,7 @@ public class Login1 extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -150,6 +152,7 @@ public class Login1 extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }
+    
     
     
     // Variables declaration - do not modify//GEN-BEGIN:variables

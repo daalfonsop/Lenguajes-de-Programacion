@@ -22,28 +22,31 @@ import javax.swing.table.TableColumn;
  * @author walter
  */
 public class LogicaUsuario {
-    ArrayList <Usuario> ListaUsuarios = new ArrayList<>();
-    private Connection conexion= null;
+
+    ArrayList<Usuario> ListaUsuarios = new ArrayList<>();
+    private Connection conexion = null;
     private PreparedStatement sentencias;
     private Statement stmt = null;
     private ResultSet rs;
     private Usuario usuario;
     private DefaultTableModel modelo;
-    String[] titulos = {"Nombre", "Apellido(s)", "Dirección", "Correo", "Contacto","usuario", "Password","Cedula", "ID"};
+    String[] titulos = {"Nombre", "Apellido(s)", "Dirección", "Correo", "Contacto", "usuario", "Password", "Cedula", "ID"};
     String[] fila = new String[9];
-    public ArrayList<Usuario> obtenerListaUsuarios(){
+
+    public ArrayList<Usuario> obtenerListaUsuarios() {
         return ListaUsuarios;
     }
-    public Usuario iniciaSesion (String user, String pass){
-        try{
-            conexion= Conexion.getConnection();
+
+    public Usuario iniciaSesion(String user, String pass) {
+        try {
+            conexion = Conexion.getConnection();
             sentencias = conexion.prepareStatement("select * from usuarios where  Usuario= ? and Pass= ?");
             sentencias.setString(1, user);
             sentencias.setString(2, pass);
             rs = sentencias.executeQuery(); // ejecuto en la base de datos
-            
-            if ( rs != null){
-                while(rs.next()){
+
+            if (rs != null) {
+                while (rs.next()) {
                     usuario = new Usuario();
                     usuario.setIdUsario(rs.getInt(1));
                     usuario.setNombre(rs.getString(2));
@@ -59,48 +62,49 @@ public class LogicaUsuario {
                     ListaUsuarios.add(usuario); // en mi lista queda cargada toda la informacion
                 }
             }
-            
-            
-            return usuario;     
-                    
-            }catch (Exception e){
-            System.out.println("error en la consulta de la base de datos: "+ e.getMessage());
+
+            return usuario;
+
+        } catch (Exception e) {
+            System.out.println("error en la consulta de la base de datos: " + e.getMessage());
         }
         return null;
     }
-    public void crearUsuario(String nombre, String apellido,String cedula,String correo,String numeroContacto,String apellid2,String pass,String usuario,String direccion,String tipoUsuario){
+
+    public void crearUsuario(String nombre, String apellido, String cedula, String correo, String numeroContacto, String apellid2, String pass, String usuario, String direccion, String tipoUsuario) {
         try {
-            conexion= Conexion.getConnection();
+            conexion = Conexion.getConnection();
             stmt = (Statement) conexion.createStatement();
             if (conexion != null) {
-                    stmt.executeUpdate("INSERT INTO usuarios(Nombre,PrimerApellido,SegundoApellido,Pass,Correo,Direccion,Usuario,NumeroContacto,Cedula,tipoUsuario) values("+"'"+ nombre + "','" + apellido + "','"
+                stmt.executeUpdate("INSERT INTO usuarios(Nombre,PrimerApellido,SegundoApellido,Pass,Correo,Direccion,Usuario,NumeroContacto,Cedula,tipoUsuario) values(" + "'" + nombre + "','" + apellido + "','"
                         + apellid2 + "','" + pass + "','" + correo + "','" + direccion + "','" + usuario + "','" + numeroContacto + "','"
                         + cedula + "','" + tipoUsuario + "')");
-                    System.out.println("Registro exitoso");
-                }
-            else{
+                System.out.println("Registro exitoso");
+            } else {
                 System.out.println("conexion fallida");
             }
-                
-            } catch (SQLException e) {
-                System.out.println("error en la consulta de la base de datos: "+ e.getMessage());
-            } catch(Exception e){
-                System.out.println("error en la consulta de la base de datos: "+ e.getMessage());
-            }
+
+        } catch (SQLException e) {
+            System.out.println("error en la consulta de la base de datos: " + e.getMessage());
+        } catch (Exception e) {
+            System.out.println("error en la consulta de la base de datos: " + e.getMessage());
+        }
     }
-    public void consultaTabla(JTable tabla, String tipoUsuario){
+
+    public void consultaTabla(JTable tabla, String tipoUsuario) {
         try {
-            conexion= Conexion.getConnection();
+            conexion = Conexion.getConnection();
             stmt = (Statement) conexion.createStatement();
-            if (conexion != null) 
-                //System.out.println("conexion exitosa");
-            modelo = new DefaultTableModel(null,titulos);
-            ResultSet rs=stmt.executeQuery("select * from Usuarios");
-            
-            while(rs.next()){
-                if(tipoUsuario.equals(rs.getString("tipoUsuario"))){
+            if (conexion != null) //System.out.println("conexion exitosa");
+            {
+                modelo = new DefaultTableModel(null, titulos);
+            }
+            ResultSet rs = stmt.executeQuery("select * from Usuarios");
+
+            while (rs.next()) {
+                if (tipoUsuario.equals(rs.getString("tipoUsuario"))) {
                     fila[0] = rs.getString("Nombre");
-                    fila[1] = (rs.getString("PrimerApellido")+" "+rs.getString("SegundoApellido"));
+                    fila[1] = rs.getString("PrimerApellido");
                     fila[2] = rs.getString("Direccion");
                     fila[3] = rs.getString("Correo");
                     fila[4] = rs.getString("NumeroContacto");
@@ -110,17 +114,41 @@ public class LogicaUsuario {
                     fila[8] = rs.getString("Id");
 
                     modelo.addRow(fila);
+
                 }
             }
             tabla.setModel(modelo);
-            
-            
-            
+
         } catch (Exception e) {
-            System.out.println("Error al extraer los datos de las tabals"+e.getMessage());
+            System.out.println("Error al extraer los datos de las tabals" + e.getMessage());
         }
-        
-        
+
     }
+
+    public void actualizar(String nombre, String apellido, String direccion, String correo, String numeroContacto, String user, String pass, String cedula, String id) {
+        try {
+            conexion = Conexion.getConnection();
+            sentencias = conexion.prepareStatement("UPDATE usuarios SET Nombre= "+"'"+nombre+"', "
+                + "PrimerApellido= "+"'"+apellido+"', "
+                + "Direccion= "+"'"+direccion+"', "
+                + "Correo= "+"'"+correo+"', "
+                + "NumeroContacto= "+"'"+numeroContacto+"', "
+                + "Usuario= "+"'"+user+"', "
+                + "Pass= "+"'"+pass+"', "
+                + "Cedula= "+"'"+cedula+"'"
+                + " where Id= " + id);
+            if (conexion != null) 
+                System.out.println("conexion exitosa");
+            
+            int z=sentencias.executeUpdate();
+            if(z>0)
+                System.out.println("Exito");
     
+
+        } catch (Exception e) {
+            System.out.println("Error al extraer los datos de las tabals" + e.getMessage());
+        }
+
+    }
+
 }
