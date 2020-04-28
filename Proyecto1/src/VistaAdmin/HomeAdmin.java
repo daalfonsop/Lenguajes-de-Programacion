@@ -5,7 +5,9 @@
  */
 package VistaAdmin;
 
+import Controlador.LogicaUsuario;
 import Vista.Login1;
+import javax.swing.table.DefaultTableModel;
 import rojerusan.RSPanelsSlider;
 
 /**
@@ -18,9 +20,14 @@ public class HomeAdmin extends javax.swing.JPanel {
      * Creates new form HomeAdmin
      */
     private Login1 login;
+    LogicaUsuario logica = new LogicaUsuario();
+    
     public HomeAdmin(Login1 login) {
         initComponents();
         this.login=login;
+        logica.consultaTabla(tablaOdon,"Odontologo");
+        logica.consultaTabla(tablePaci, "Cliente");
+        logica.consultaTabla(tablaAux, "Auxiliar");
     }
 
     /**
@@ -54,7 +61,7 @@ public class HomeAdmin extends javax.swing.JPanel {
         rSLabelHora2 = new rojeru_san.rsdate.RSLabelHora();
         jLabel2 = new javax.swing.JLabel();
         jScrollPane6 = new javax.swing.JScrollPane();
-        Table = new rojerusan.RSTableMetro1();
+        tablaOdon = new rojerusan.RSTableMetro1();
         persona = new necesario.TextField();
         panelPaci = new javax.swing.JPanel();
         jPanel6 = new javax.swing.JPanel();
@@ -65,13 +72,13 @@ public class HomeAdmin extends javax.swing.JPanel {
         rSLabelHora4 = new rojeru_san.rsdate.RSLabelHora();
         jLabel4 = new javax.swing.JLabel();
         jScrollPane5 = new javax.swing.JScrollPane();
-        rSTableMetro14 = new rojerusan.RSTableMetro1();
+        tablePaci = new rojerusan.RSTableMetro1();
         persona1 = new necesario.TextField();
         panelAux = new javax.swing.JPanel();
         jPanel4 = new javax.swing.JPanel();
         persona2 = new necesario.TextField();
         jScrollPane3 = new javax.swing.JScrollPane();
-        rSTableMetro12 = new rojerusan.RSTableMetro1();
+        tablaAux = new rojerusan.RSTableMetro1();
         rSButtonMaterialIconUno4 = new RSMaterialComponent.RSButtonMaterialIconUno();
         rSButtonMaterialIconUno5 = new RSMaterialComponent.RSButtonMaterialIconUno();
         rSButtonMaterialIconUno6 = new RSMaterialComponent.RSButtonMaterialIconUno();
@@ -176,7 +183,7 @@ public class HomeAdmin extends javax.swing.JPanel {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 203, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 482, Short.MAX_VALUE)
                 .addComponent(rSLabelHora1, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
@@ -196,9 +203,9 @@ public class HomeAdmin extends javax.swing.JPanel {
             panelHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(panelHomeLayout.createSequentialGroup()
-                .addGap(72, 72, 72)
+                .addGap(159, 159, 159)
                 .addComponent(rSCalendar2, javax.swing.GroupLayout.PREFERRED_SIZE, 493, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(50, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         panelHomeLayout.setVerticalGroup(
             panelHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -244,7 +251,7 @@ public class HomeAdmin extends javax.swing.JPanel {
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 203, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 253, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 482, Short.MAX_VALUE)
                 .addComponent(rSLabelHora2, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
@@ -258,26 +265,37 @@ public class HomeAdmin extends javax.swing.JPanel {
                 .addContainerGap(35, Short.MAX_VALUE))
         );
 
-        Table.setModel(new javax.swing.table.DefaultTableModel(
+        tablaOdon.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null}
+                {null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null}
             },
             new String [] {
-                "Nombre", "Apellido(s)", "Dirección", "Correo", "Contacto", "Usuario", "Contraseña", "ID"
+                "Nombre", "Apellido(s)", "Dirección", "Correo", "Contacto", "Usuario", "Password", "Cedula", "ID"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Integer.class
+                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
             };
 
             public Class getColumnClass(int columnIndex) {
                 return types [columnIndex];
             }
         });
-        jScrollPane6.setViewportView(Table);
+        tablaOdon.setName("tablaOdon"); // NOI18N
+        tablaOdon.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tablaOdonMouseClicked(evt);
+            }
+        });
+        jScrollPane6.setViewportView(tablaOdon);
 
         persona.setEditable(false);
         persona.setPlaceholder("DefaultUsuario");
@@ -367,26 +385,27 @@ public class HomeAdmin extends javax.swing.JPanel {
                 .addContainerGap(35, Short.MAX_VALUE))
         );
 
-        rSTableMetro14.setModel(new javax.swing.table.DefaultTableModel(
+        tablePaci.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null}
+                {null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null}
             },
             new String [] {
-                "Nombre", "Apellido(s)", "Dirección", "Correo", "Contacto", "Usuario", "Contraseña", "ID"
+                "Nombre", "Apellido(s)", "Dirección", "Correo", "Contacto", "Usuario", "Password", "Cedula", "ID"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Integer.class
+                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
             };
 
             public Class getColumnClass(int columnIndex) {
                 return types [columnIndex];
             }
         });
-        jScrollPane5.setViewportView(rSTableMetro14);
+        tablePaci.setName("tablePaci"); // NOI18N
+        jScrollPane5.setViewportView(tablePaci);
 
         persona1.setEditable(false);
         persona1.setPlaceholder("DefaultUsuario");
@@ -398,14 +417,14 @@ public class HomeAdmin extends javax.swing.JPanel {
             .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
                 .addComponent(persona1, javax.swing.GroupLayout.PREFERRED_SIZE, 225, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 264, Short.MAX_VALUE)
                 .addComponent(rSButtonMaterialIconUno7, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(rSButtonMaterialIconUno8, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(rSButtonMaterialIconUno9, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
-            .addComponent(jScrollPane5, javax.swing.GroupLayout.DEFAULT_SIZE, 615, Short.MAX_VALUE)
+            .addComponent(jScrollPane5)
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -425,7 +444,7 @@ public class HomeAdmin extends javax.swing.JPanel {
         panelPaci.setLayout(panelPaciLayout);
         panelPaciLayout.setHorizontalGroup(
             panelPaciLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         panelPaciLayout.setVerticalGroup(
             panelPaciLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -441,26 +460,27 @@ public class HomeAdmin extends javax.swing.JPanel {
         persona2.setEditable(false);
         persona2.setPlaceholder("DefaultUsuario");
 
-        rSTableMetro12.setModel(new javax.swing.table.DefaultTableModel(
+        tablaAux.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null}
+                {null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null}
             },
             new String [] {
-                "Nombre", "Apellido(s)", "Dirección", "Correo", "Contacto", "Usuario", "Contraseña", "ID"
+                "Nombre", "Apellido(s)", "Dirección", "Correo", "Contacto", "Usuario", "Password", "Cedula", "ID"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Integer.class
+                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
             };
 
             public Class getColumnClass(int columnIndex) {
                 return types [columnIndex];
             }
         });
-        jScrollPane3.setViewportView(rSTableMetro12);
+        tablaAux.setName("tablaAux"); // NOI18N
+        jScrollPane3.setViewportView(tablaAux);
 
         rSButtonMaterialIconUno4.setText("Agregar");
         rSButtonMaterialIconUno4.setIcons(rojeru_san.efectos.ValoresEnum.ICONS.ADD_CIRCLE_OUTLINE);
@@ -504,10 +524,9 @@ public class HomeAdmin extends javax.swing.JPanel {
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane3)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
                 .addComponent(persona2, javax.swing.GroupLayout.PREFERRED_SIZE, 225, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(rSButtonMaterialIconUno4, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(rSButtonMaterialIconUno5, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -515,6 +534,9 @@ public class HomeAdmin extends javax.swing.JPanel {
                 .addComponent(rSButtonMaterialIconUno6, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
             .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 844, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -574,6 +596,7 @@ public class HomeAdmin extends javax.swing.JPanel {
 
     private void boton_odontologosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton_odontologosActionPerformed
 
+        logica.consultaTabla(tablaOdon,"Odontologo");
         this.boton_home.setSelected(false);
         this.boton_odontologos.setSelected(true);
         this.boton_auxiliares.setSelected(false);
@@ -587,7 +610,7 @@ public class HomeAdmin extends javax.swing.JPanel {
         this.boton_odontologos.setSelected(false);
         this.boton_auxiliares.setSelected(true);
         this.boton_pacientes.setSelected(false);
-
+        logica.consultaTabla(tablaAux, "Auxiliar");
         panel.setPanelSlider(1, panelAux, RSPanelsSlider.DIRECT.LEFT);
     }//GEN-LAST:event_boton_auxiliaresActionPerformed
 
@@ -596,17 +619,20 @@ public class HomeAdmin extends javax.swing.JPanel {
         this.boton_odontologos.setSelected(false);
         this.boton_auxiliares.setSelected(false);
         this.boton_pacientes.setSelected(true);
-
+        logica.consultaTabla(tablePaci, "Cliente");
         panel.setPanelSlider(1, panelPaci, RSPanelsSlider.DIRECT.LEFT);
     }//GEN-LAST:event_boton_pacientesActionPerformed
 
     private void rSButtonMaterialIconUno1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rSButtonMaterialIconUno1ActionPerformed
         new Login1(login).setVisible(true);
     }//GEN-LAST:event_rSButtonMaterialIconUno1ActionPerformed
+
+    private void tablaOdonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tablaOdonMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tablaOdonMouseClicked
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private rojerusan.RSTableMetro1 Table;
     private RSMaterialComponent.RSButtonMaterialIconUno boton_auxiliares;
     private RSMaterialComponent.RSButtonMaterialIconUno boton_home;
     private RSMaterialComponent.RSButtonMaterialIconUno boton_odontologos;
@@ -650,7 +676,8 @@ public class HomeAdmin extends javax.swing.JPanel {
     private rojeru_san.rsdate.RSLabelHora rSLabelHora2;
     private rojeru_san.rsdate.RSLabelHora rSLabelHora3;
     private rojeru_san.rsdate.RSLabelHora rSLabelHora4;
-    private rojerusan.RSTableMetro1 rSTableMetro12;
-    private rojerusan.RSTableMetro1 rSTableMetro14;
+    private rojerusan.RSTableMetro1 tablaAux;
+    private rojerusan.RSTableMetro1 tablaOdon;
+    private rojerusan.RSTableMetro1 tablePaci;
     // End of variables declaration//GEN-END:variables
 }

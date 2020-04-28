@@ -13,6 +13,9 @@ import com.mysql.jdbc.Statement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import javax.swing.JTable;
+import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableColumn;
 
 /**
  *
@@ -25,7 +28,9 @@ public class LogicaUsuario {
     private Statement stmt = null;
     private ResultSet rs;
     private Usuario usuario;
-    
+    private DefaultTableModel modelo;
+    String[] titulos = {"Nombre", "Apellido(s)", "Dirección", "Correo", "Contacto","usuario", "Password","Cedula", "ID"};
+    String[] fila = new String[9];
     public ArrayList<Usuario> obtenerListaUsuarios(){
         return ListaUsuarios;
     }
@@ -82,6 +87,40 @@ public class LogicaUsuario {
             } catch(Exception e){
                 System.out.println("error en la consulta de la base de datos: "+ e.getMessage());
             }
+    }
+    public void consultaTabla(JTable tabla, String tipoUsuario){
+        try {
+            conexion= Conexion.getConnection();
+            stmt = (Statement) conexion.createStatement();
+            if (conexion != null) 
+                //System.out.println("conexion exitosa");
+            modelo = new DefaultTableModel(null,titulos);
+            ResultSet rs=stmt.executeQuery("select * from Usuarios");
+            
+            while(rs.next()){
+                if(tipoUsuario.equals(rs.getString("tipoUsuario"))){
+                    fila[0] = rs.getString("Nombre");
+                    fila[1] = (rs.getString("PrimerApellido")+" "+rs.getString("SegundoApellido"));
+                    fila[2] = rs.getString("Direccion");
+                    fila[3] = rs.getString("Correo");
+                    fila[4] = rs.getString("NumeroContacto");
+                    fila[5] = rs.getString("Usuario");
+                    fila[6] = rs.getString("Pass");
+                    fila[7] = rs.getString("Cedula");
+                    fila[8] = rs.getString("Id");
+
+                    modelo.addRow(fila);
+                }
+            }
+            tabla.setModel(modelo);
+            
+            
+            
+        } catch (Exception e) {
+            System.out.println("Error al extraer los datos de las tabals"+e.getMessage());
+        }
+        
+        
     }
     
 }

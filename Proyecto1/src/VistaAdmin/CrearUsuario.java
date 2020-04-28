@@ -44,13 +44,13 @@ public class CrearUsuario extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        rSPanelGradiente1 = new rojeru_san.rspanel.RSPanelGradiente();
         txt_correo = new javax.swing.JTextField();
         obligatorio = new javax.swing.JLabel();
         obligatorio1 = new javax.swing.JLabel();
         obligatorio2 = new javax.swing.JLabel();
         obligatorio4 = new javax.swing.JLabel();
         obligatorio5 = new javax.swing.JLabel();
-        label_creandoUsuario = new javax.swing.JLabel();
         obligatorio6 = new javax.swing.JLabel();
         obligatorio7 = new javax.swing.JLabel();
         obligatorio8 = new javax.swing.JLabel();
@@ -70,68 +70,67 @@ public class CrearUsuario extends javax.swing.JPanel {
         bx_tipo_usuario = new rojerusan.RSComboBox();
         salir = new rojerusan.RSMaterialButtonRectangle();
         crear = new rojerusan.RSMaterialButtonRectangle();
+        jLabel1 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setPreferredSize(new java.awt.Dimension(558, 508));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        rSPanelGradiente1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         txt_correo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txt_correoActionPerformed(evt);
             }
         });
-        add(txt_correo, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 300, 360, 31));
+        rSPanelGradiente1.add(txt_correo, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 300, 360, 31));
 
         obligatorio.setForeground(new java.awt.Color(255, 0, 0));
         obligatorio.setText("*");
-        add(obligatorio, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 90, 10, -1));
+        rSPanelGradiente1.add(obligatorio, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 90, 10, -1));
 
         obligatorio1.setForeground(new java.awt.Color(255, 0, 0));
         obligatorio1.setText(" *");
-        add(obligatorio1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 180, 10, -1));
+        rSPanelGradiente1.add(obligatorio1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 180, 10, -1));
 
         obligatorio2.setForeground(new java.awt.Color(255, 0, 0));
         obligatorio2.setText(" *");
-        add(obligatorio2, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 220, 10, -1));
+        rSPanelGradiente1.add(obligatorio2, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 220, 10, -1));
 
         obligatorio4.setForeground(new java.awt.Color(255, 0, 0));
         obligatorio4.setText(" *");
-        add(obligatorio4, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 220, 10, -1));
+        rSPanelGradiente1.add(obligatorio4, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 220, 10, -1));
 
         obligatorio5.setForeground(new java.awt.Color(255, 0, 0));
         obligatorio5.setText("*");
-        add(obligatorio5, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 260, 10, -1));
-
-        label_creandoUsuario.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
-        label_creandoUsuario.setText("Creando Usuario");
-        add(label_creandoUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 40, -1, 23));
+        rSPanelGradiente1.add(obligatorio5, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 260, 10, -1));
 
         obligatorio6.setForeground(new java.awt.Color(255, 0, 0));
         obligatorio6.setText("*");
-        add(obligatorio6, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 300, 10, -1));
+        rSPanelGradiente1.add(obligatorio6, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 300, 10, -1));
 
         obligatorio7.setForeground(new java.awt.Color(255, 0, 0));
         obligatorio7.setText("*");
-        add(obligatorio7, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 340, 20, -1));
+        rSPanelGradiente1.add(obligatorio7, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 340, 20, -1));
 
         obligatorio8.setForeground(new java.awt.Color(255, 0, 0));
         obligatorio8.setText("*");
-        add(obligatorio8, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 380, 20, -1));
+        rSPanelGradiente1.add(obligatorio8, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 380, 20, -1));
 
         txt_usuario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txt_usuarioActionPerformed(evt);
             }
         });
-        add(txt_usuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 140, 162, 30));
+        rSPanelGradiente1.add(txt_usuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 140, 162, 30));
 
         ayuda.setForeground(new java.awt.Color(153, 153, 153));
         ayuda.setText("Los campos con * son obligatorios");
-        add(ayuda, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 120, -1, -1));
+        rSPanelGradiente1.add(ayuda, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 120, -1, -1));
 
         obligatorio3.setForeground(new java.awt.Color(255, 0, 0));
         obligatorio3.setText(" *");
-        add(obligatorio3, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 140, 10, -1));
+        rSPanelGradiente1.add(obligatorio3, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 140, 10, -1));
 
         txt_nombres.setToolTipText("");
         txt_nombres.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
@@ -140,21 +139,21 @@ public class CrearUsuario extends javax.swing.JPanel {
                 txt_nombresKeyTyped(evt);
             }
         });
-        add(txt_nombres, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 140, 162, 30));
+        rSPanelGradiente1.add(txt_nombres, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 140, 162, 30));
 
         txt_primerApellido.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 txt_primerApellidoKeyTyped(evt);
             }
         });
-        add(txt_primerApellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 180, 162, 30));
+        rSPanelGradiente1.add(txt_primerApellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 180, 162, 30));
 
         txt_segundoApellido.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 txt_segundoApellidoKeyTyped(evt);
             }
         });
-        add(txt_segundoApellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 180, 162, 30));
+        rSPanelGradiente1.add(txt_segundoApellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 180, 162, 30));
 
         txt_cedula.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -166,24 +165,24 @@ public class CrearUsuario extends javax.swing.JPanel {
                 txt_cedulaKeyTyped(evt);
             }
         });
-        add(txt_cedula, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 220, 162, 29));
+        rSPanelGradiente1.add(txt_cedula, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 220, 162, 29));
 
         txt_numeroContacto.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 txt_numeroContactoKeyTyped(evt);
             }
         });
-        add(txt_numeroContacto, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 220, 162, 29));
-        add(txt_direccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 260, 360, 30));
-        add(txt_contraseña, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 340, 360, 30));
-        add(txt_repetirContraseña, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 380, 360, 30));
+        rSPanelGradiente1.add(txt_numeroContacto, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 220, 162, 29));
+        rSPanelGradiente1.add(txt_direccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 260, 360, 30));
+        rSPanelGradiente1.add(txt_contraseña, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 340, 360, 30));
+        rSPanelGradiente1.add(txt_repetirContraseña, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 380, 360, 30));
 
         obligatorio9.setForeground(new java.awt.Color(255, 0, 0));
         obligatorio9.setText(" *");
-        add(obligatorio9, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 140, 10, -1));
+        rSPanelGradiente1.add(obligatorio9, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 140, 10, -1));
 
         logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/logoFrui.jpg"))); // NOI18N
-        add(logo, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 0, 160, 140));
+        rSPanelGradiente1.add(logo, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 0, 160, 140));
 
         bx_tipo_usuario.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Odontologo", "Auxiliar", "Cliente" }));
         bx_tipo_usuario.setToolTipText("Tipo de usuario");
@@ -192,7 +191,7 @@ public class CrearUsuario extends javax.swing.JPanel {
                 bx_tipo_usuarioActionPerformed(evt);
             }
         });
-        add(bx_tipo_usuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 80, 150, -1));
+        rSPanelGradiente1.add(bx_tipo_usuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 80, 150, -1));
 
         salir.setText("Salir");
         salir.addActionListener(new java.awt.event.ActionListener() {
@@ -200,7 +199,7 @@ public class CrearUsuario extends javax.swing.JPanel {
                 salirActionPerformed(evt);
             }
         });
-        add(salir, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 460, 110, 40));
+        rSPanelGradiente1.add(salir, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 460, 110, 40));
 
         crear.setText("Crear");
         crear.addActionListener(new java.awt.event.ActionListener() {
@@ -208,7 +207,14 @@ public class CrearUsuario extends javax.swing.JPanel {
                 crearActionPerformed(evt);
             }
         });
-        add(crear, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 420, 150, 40));
+        rSPanelGradiente1.add(crear, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 420, 150, 40));
+
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("Creando Usuario");
+        rSPanelGradiente1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 30, -1, -1));
+
+        add(rSPanelGradiente1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 580, 530));
     }// </editor-fold>//GEN-END:initComponents
 
     private void txt_usuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_usuarioActionPerformed
@@ -225,10 +231,6 @@ public class CrearUsuario extends javax.swing.JPanel {
     private void txt_cedulaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_cedulaActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txt_cedulaActionPerformed
-
-    private void txt_correoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_correoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txt_correoActionPerformed
 
     private void txt_numeroContactoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_numeroContactoKeyTyped
         char c = evt.getKeyChar();
@@ -303,6 +305,10 @@ public class CrearUsuario extends javax.swing.JPanel {
         this.txt_repetirContraseña.setText("contraseña");
     }//GEN-LAST:event_crearActionPerformed
 
+    private void txt_correoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_correoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txt_correoActionPerformed
+
     
 
     public void holders() {
@@ -322,7 +328,7 @@ public class CrearUsuario extends javax.swing.JPanel {
     private javax.swing.JLabel ayuda;
     private rojerusan.RSComboBox bx_tipo_usuario;
     private rojerusan.RSMaterialButtonRectangle crear;
-    private javax.swing.JLabel label_creandoUsuario;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel logo;
     private javax.swing.JLabel obligatorio;
     private javax.swing.JLabel obligatorio1;
@@ -334,6 +340,7 @@ public class CrearUsuario extends javax.swing.JPanel {
     private javax.swing.JLabel obligatorio7;
     private javax.swing.JLabel obligatorio8;
     private javax.swing.JLabel obligatorio9;
+    private rojeru_san.rspanel.RSPanelGradiente rSPanelGradiente1;
     private rojerusan.RSMaterialButtonRectangle salir;
     private javax.swing.JTextField txt_cedula;
     private javax.swing.JPasswordField txt_contraseña;

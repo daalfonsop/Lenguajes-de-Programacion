@@ -25,7 +25,7 @@ public class Conexion {
         try {
             Class.forName("com.mysql.jdbc.Driver"); // llamo la libreria
             c = DriverManager.getConnection(URL, USERNAME, PASSWORD);
-            System.out.println("conexion a base de datos exitosa");
+            //System.out.println("conexion a base de datos exitosa");
             
         }catch (ClassNotFoundException | SQLException e) {
             System.out.println("no se conecto a la base de datos");
