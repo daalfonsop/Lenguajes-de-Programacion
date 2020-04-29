@@ -71,7 +71,7 @@ public class LogicaUsuario {
         return null;
     }
 
-    public void crearUsuario(String nombre, String apellido, String cedula, String correo, String numeroContacto, String apellid2, String pass, String usuario, String direccion, String tipoUsuario) {
+    public void crearUsuario(String nombre, String apellido, String cedula, String correo, String numeroContacto, String apellid2, String pass, String usuario, String direccion, String tipoUsuario) throws SQLException {
         try {
             conexion = Conexion.getConnection();
             stmt = (Statement) conexion.createStatement();
@@ -88,6 +88,10 @@ public class LogicaUsuario {
             System.out.println("error en la consulta de la base de datos: " + e.getMessage());
         } catch (Exception e) {
             System.out.println("error en la consulta de la base de datos: " + e.getMessage());
+        }
+        finally{
+            sentencias=null;
+            conexion.close();
         }
     }
 
@@ -125,7 +129,7 @@ public class LogicaUsuario {
 
     }
 
-    public void actualizar(String nombre, String apellido, String direccion, String correo, String numeroContacto, String user, String pass, String cedula, String id) {
+    public void actualizar(String nombre, String apellido, String direccion, String correo, String numeroContacto, String user, String pass, String cedula, String id) throws SQLException {
         try {
             conexion = Conexion.getConnection();
             sentencias = conexion.prepareStatement("UPDATE usuarios SET Nombre= "+"'"+nombre+"', "
@@ -140,15 +144,30 @@ public class LogicaUsuario {
             if (conexion != null) 
                 System.out.println("conexion exitosa");
             
-            int z=sentencias.executeUpdate();
-            if(z>0)
-                System.out.println("Exito");
+            sentencias.executeUpdate();
+            System.out.println("exito");
     
 
         } catch (Exception e) {
             System.out.println("Error al extraer los datos de las tabals" + e.getMessage());
         }
+        finally{
+            sentencias=null;
+            conexion.close();
+        }
 
+    }
+    public void eliminar(String user) {
+        try {
+            conexion = Conexion.getConnection();
+            sentencias = conexion.prepareStatement("DELETE FROM usuarios WHERE Id= "+user);
+
+            sentencias.executeUpdate();
+            System.out.println("Exito");
+        } catch (Exception e) {
+            System.out.println("Error "+e.getMessage());
+        }
+        
     }
 
 }

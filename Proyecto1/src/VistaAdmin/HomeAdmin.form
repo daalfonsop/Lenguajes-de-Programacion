@@ -284,7 +284,7 @@
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Component id="modOdon" min="-2" pref="103" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="rSButtonMaterialIconUno3" min="-2" pref="103" max="-2" attributes="0"/>
+                          <Component id="deleteOdon" min="-2" pref="103" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                       </Group>
                       <Component id="jScrollPane6" alignment="0" pref="0" max="32767" attributes="0"/>
@@ -298,7 +298,7 @@
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="rSButtonMaterialIconUno1" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
                               <Component id="modOdon" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
-                              <Component id="rSButtonMaterialIconUno3" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
+                              <Component id="deleteOdon" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
                               <Component id="persona" alignment="3" pref="0" max="32767" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
@@ -330,13 +330,16 @@
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="modOdonActionPerformed"/>
                   </Events>
                 </Component>
-                <Component class="RSMaterialComponent.RSButtonMaterialIconUno" name="rSButtonMaterialIconUno3">
+                <Component class="RSMaterialComponent.RSButtonMaterialIconUno" name="deleteOdon">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Eliminar"/>
                     <Property name="icons" type="rojeru_san.efectos.ValoresEnum$ICONS" editor="org.netbeans.modules.form.editors.EnumEditor">
                       <Value id="DELETE"/>
                     </Property>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="deleteOdonActionPerformed"/>
+                  </Events>
                 </Component>
                 <Container class="javax.swing.JPanel" name="jPanel3">
                   <Properties>
@@ -480,7 +483,7 @@
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="12" style="1"/>
                     </Property>
-                    <Property name="placeholder" type="java.lang.String" value="DefaultUsuario"/>
+                    <Property name="placeholder" type="java.lang.String" value=""/>
                   </Properties>
                 </Component>
               </SubComponents>
@@ -528,7 +531,7 @@
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Component id="modPaci" min="-2" pref="103" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="rSButtonMaterialIconUno9" min="-2" pref="103" max="-2" attributes="0"/>
+                          <Component id="delePaci" min="-2" pref="103" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                       </Group>
                       <Component id="jScrollPane5" alignment="0" max="32767" attributes="0"/>
@@ -542,7 +545,7 @@
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="rSButtonMaterialIconUno7" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
                               <Component id="modPaci" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
-                              <Component id="rSButtonMaterialIconUno9" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
+                              <Component id="delePaci" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
                               <Component id="persona1" alignment="3" pref="0" max="32767" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
@@ -559,6 +562,9 @@
                       <Value id="ADD_CIRCLE_OUTLINE"/>
                     </Property>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="rSButtonMaterialIconUno7ActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="RSMaterialComponent.RSButtonMaterialIconUno" name="modPaci">
                   <Properties>
@@ -571,13 +577,16 @@
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="modPaciActionPerformed"/>
                   </Events>
                 </Component>
-                <Component class="RSMaterialComponent.RSButtonMaterialIconUno" name="rSButtonMaterialIconUno9">
+                <Component class="RSMaterialComponent.RSButtonMaterialIconUno" name="delePaci">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Eliminar"/>
                     <Property name="icons" type="rojeru_san.efectos.ValoresEnum$ICONS" editor="org.netbeans.modules.form.editors.EnumEditor">
                       <Value id="DELETE"/>
                     </Property>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="delePaciActionPerformed"/>
+                  </Events>
                 </Component>
                 <Container class="javax.swing.JPanel" name="jPanel7">
                   <Properties>
@@ -720,7 +729,7 @@
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="12" style="1"/>
                     </Property>
-                    <Property name="placeholder" type="java.lang.String" value="DefaultUsuario"/>
+                    <Property name="placeholder" type="java.lang.String" value=""/>
                   </Properties>
                 </Component>
               </SubComponents>
@@ -767,7 +776,7 @@
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Component id="modAux" min="-2" pref="103" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="rSButtonMaterialIconUno6" min="-2" pref="103" max="-2" attributes="0"/>
+                          <Component id="deleAux" min="-2" pref="103" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                       </Group>
                       <Component id="jPanel5" alignment="0" max="32767" attributes="0"/>
@@ -785,7 +794,7 @@
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="rSButtonMaterialIconUno4" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
                               <Component id="modAux" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
-                              <Component id="rSButtonMaterialIconUno6" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
+                              <Component id="deleAux" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
                               <Component id="persona2" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
@@ -801,8 +810,11 @@
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="12" style="1"/>
                     </Property>
-                    <Property name="placeholder" type="java.lang.String" value="DefaultUsuario"/>
+                    <Property name="placeholder" type="java.lang.String" value=""/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="persona2ActionPerformed"/>
+                  </Events>
                 </Component>
                 <Container class="javax.swing.JScrollPane" name="jScrollPane3">
                   <AuxValues>
@@ -904,14 +916,20 @@
                       <Value id="CACHED"/>
                     </Property>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="modAuxActionPerformed"/>
+                  </Events>
                 </Component>
-                <Component class="RSMaterialComponent.RSButtonMaterialIconUno" name="rSButtonMaterialIconUno6">
+                <Component class="RSMaterialComponent.RSButtonMaterialIconUno" name="deleAux">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Eliminar"/>
                     <Property name="icons" type="rojeru_san.efectos.ValoresEnum$ICONS" editor="org.netbeans.modules.form.editors.EnumEditor">
                       <Value id="DELETE"/>
                     </Property>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="deleAuxActionPerformed"/>
+                  </Events>
                 </Component>
                 <Container class="javax.swing.JPanel" name="jPanel5">
                   <Properties>
