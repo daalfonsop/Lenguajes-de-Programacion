@@ -12,7 +12,7 @@ I have done some projects with my colleagues that I will also upload, among them
 ![Logo fruithz](https://github.com/WalterAlturoaAparicio/Lenguajes-de-Programacion/blob/master/Proyecto1/src/Imagenes/logoFrui.jpg)
 - <a href="https://github.com/WalterAlturoaAparicio/Lenguajes-de-Programacion/tree/master/Proyecto1" target="_blank">fruithz (dentistry application)</a> 
 
-#### 1. Descripción del Problema
+#### 1. Descripción del Problemaaaa
 
 En la mayoría de las odontologías se lleva el control de las citas de los pacientes en forma física, por lo general estos controles se llevan en una carpeta donde se anexan todos los registros con sus radiografías y otras cosas; cuando la clínica odontológica tiene varios pacientes se emplea un cuarto grande donde se ponen estantes con separadores, en los cuales se ubican las carpetas de las personas separadas por las iniciales de su nombre.
 
