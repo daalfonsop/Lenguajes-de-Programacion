@@ -148,4 +148,4 @@ Se desarrollará una aplicación que pueda tener la opción de facilitar el proc
 |Usuarios:|Empresario Odontología y Trabajador.|
 
 ### Mockup
-https://marvelapp.com/dh945da
+- <a href="https://marvelapp.com/dh945da" target="_blank">FRUITHZ</a> 
