@@ -30,25 +30,26 @@ Se desarrollará una aplicación que pueda tener la opción de facilitar el proc
 |Cliente|Persona que ya tiene un servicio con la clínica odontológica |Entregar información personal y necesaria a Trabajadores o Empresarios para poder ser atendido.|
 |Desarrollador|Desarrolladores de Software|Debe realizar los prototipos necesarios para desarrollar la aplicación |
 
-####2.2 Perfiles de Stakeholders
+#### 2.2 Perfiles de Stakeholders
 
-#####Empresario Odontología
-| |
-|:---------------:| |:---------------:|
+##### Empresario Odontología
+
+||
+---------------:|:---------------
 |Nombre|Gerente, dueño o persona encargada de la clínica odontológica.|
 |Descripción|Garantiza y revisa que todos los procesos dentro de la empresa se están llevando de la forma correcta.|
 |Responsabilidad|Revisar información de todos sus empleados, carpetas y clientes. Crear, eliminar, editar y actualizar, carpetas y empleados.|
 
-#####Trabajador
+##### Trabajador
 
-| |
-|:---------------:| |:---------------:|
+||
+---------------:|:---------------: 
 |Nombre|Odontólogo|
 |Descripción|Se encarga de realizar los procesos dentales a los pacientes, de crear, editar pacientes y carpetas en la aplicación.|
 |Responsabilidad|Consultar, actualizar y editar información de clientes y de sus carpetas. Crear y editar clientes.|
 
 | |
-|:---------------:| |:---------------:|
+---------------:|:---------------
 |Nombre|Auxiliar de Odontología|
 |Descripción|Se encarga de prestar servicio al cliente, del manejo de materiales y ayudante del odontólogo.Puede crear, editar pacientes y carpetas en la aplicación. |
 |Responsabilidad|Consultar, actualizar y editar información de clientes y de sus carpetas. Crear y editar clientes.|
@@ -57,22 +58,22 @@ Se desarrollará una aplicación que pueda tener la opción de facilitar el proc
 ##### Cliente
 
 | |
-|:---------------:| |:---------------:|
+|:---------------:|:---------------:|
 |Nombre|Persona que ya tiene un servicio con la clínica odontológica.|
 |Descripción|Toda persona que desea adquirir un servicio de la clínica odontológica.|
 |Responsabilidad|Entregar información personal y necesaria a Trabajadores o Empresarios para poder ser atendido.|
 
-#####Desarrollador
+##### Desarrollador
 
 | |
-|:---------------:| |:---------------:|
+|:---------------:|:---------------:|
 |Nombre	|Walter Alturo Aparício – Diego Andrés Alfonso Pérez|
 |Descripción|Encargados de crear la interfaz grafica y documentación de la aplicación|
 |Responsabilidad|Debe realizar los prototipos necesarios para desarrollar la aplicación|
 
-####2.3. Requerimientos Funcionales del Sistema
+#### 2.3. Requerimientos Funcionales del Sistema
 | |
-|:---------------:| |:---------------:|
+|:---------------:|:---------------:|
 |RF-01|
 |Nombre:|Crear Usuarios|
 |Descripción:|El sistema debe permitir la creación de clientes, con todos los datos personales necesarios.|
@@ -91,7 +92,7 @@ Se desarrollará una aplicación que pueda tener la opción de facilitar el proc
 
 #### 2.4. Requerimientos No Funcionales de Sistema
 | |
-|:---------------:| |:---------------:|
+|:---------------:|:---------------:|
 |RNF-01|
 |Característica:|Concurrencia|
 |Descripción:|Se debe poder usar en distintas máquinas|
@@ -116,7 +117,7 @@ Se desarrollará una aplicación que pueda tener la opción de facilitar el proc
 #### 2.5. Casos de Uso Requerimientos Funcionales del Sistema
 
 | | 
-|:---------------:| |:---------------:| 
+|:---------------:|:---------------:| 
 |RF-01| 
 |Nombre:|Crear Usuarios| 
 |Entrada:|Tendrá un formulario con los siguientes campos: Nombres, primer apellido, segundo apellido, cedula, numero de contacto, dirección de domicilio, correo electrónico, contraseña y repetir contraseña| 
@@ -142,9 +143,6 @@ Se desarrollará una aplicación que pueda tener la opción de facilitar el proc
 |Entrada:|Tendrá una lista en cual se dará clic, saldrán las opciones de los tipos de usuarios que se desean ver.|
 |Salida:|Se mostrará la información de los usuarios señalados por su tipo.|
 |Usuarios:|Empresario Odontología y Trabajador.|
-
-###Mockup
-https://marvelapp.com/dh945da
 
 ### Mockup
 https://marvelapp.com/dh945da
