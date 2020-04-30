@@ -34,7 +34,7 @@ Se desarrollará una aplicación que pueda tener la opción de facilitar el proc
 
 ##### Empresario Odontología
 
-||
+|||
 ---------------:|:---------------
 |Nombre|Gerente, dueño o persona encargada de la clínica odontológica.|
 |Descripción|Garantiza y revisa que todos los procesos dentro de la empresa se están llevando de la forma correcta.|
@@ -42,13 +42,13 @@ Se desarrollará una aplicación que pueda tener la opción de facilitar el proc
 
 ##### Trabajador
 
-||
+|||
 ---------------:|:---------------: 
 |Nombre|Odontólogo|
 |Descripción|Se encarga de realizar los procesos dentales a los pacientes, de crear, editar pacientes y carpetas en la aplicación.|
 |Responsabilidad|Consultar, actualizar y editar información de clientes y de sus carpetas. Crear y editar clientes.|
 
-| |
+|||
 ---------------:|:---------------
 |Nombre|Auxiliar de Odontología|
 |Descripción|Se encarga de prestar servicio al cliente, del manejo de materiales y ayudante del odontólogo.Puede crear, editar pacientes y carpetas en la aplicación. |
@@ -57,7 +57,7 @@ Se desarrollará una aplicación que pueda tener la opción de facilitar el proc
 
 ##### Cliente
 
-| |
+|||
 |:---------------:|:---------------:|
 |Nombre|Persona que ya tiene un servicio con la clínica odontológica.|
 |Descripción|Toda persona que desea adquirir un servicio de la clínica odontológica.|
@@ -65,14 +65,14 @@ Se desarrollará una aplicación que pueda tener la opción de facilitar el proc
 
 ##### Desarrollador
 
-| |
+|||
 |:---------------:|:---------------:|
 |Nombre	|Walter Alturo Aparício – Diego Andrés Alfonso Pérez|
 |Descripción|Encargados de crear la interfaz grafica y documentación de la aplicación|
 |Responsabilidad|Debe realizar los prototipos necesarios para desarrollar la aplicación|
 
 #### 2.3. Requerimientos Funcionales del Sistema
-| |
+|||
 |:---------------:|:---------------:|
 |RF-01|
 |Nombre:|Crear Usuarios|
@@ -91,7 +91,7 @@ Se desarrollará una aplicación que pueda tener la opción de facilitar el proc
 |Descripción:|Dentro del sistema, dependiendo el Rol del usuario, podrá seleccionar que usuarios desea observar, únicamente podrán hacer esto el empresario y el trabajador (ej. Un odontólogo puede observar una tabla con todos los pacientes que tenga)|
 
 #### 2.4. Requerimientos No Funcionales de Sistema
-| |
+|||
 |:---------------:|:---------------:|
 |RNF-01|
 |Característica:|Concurrencia|
@@ -116,7 +116,7 @@ Se desarrollará una aplicación que pueda tener la opción de facilitar el proc
 
 #### 2.5. Casos de Uso Requerimientos Funcionales del Sistema
 
-| | 
+|||
 |:---------------:|:---------------:| 
 |RF-01| 
 |Nombre:|Crear Usuarios| 
