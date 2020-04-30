@@ -19,13 +19,12 @@ El trabajo de buscar, modificar, añadir o borrar algún elemento de las carpeta
 
 Se desarrollará una aplicación que pueda tener la opción de facilitar el proceso de almacenamiento, consulta y editar de las carpetas de cada uno de los pacientes, esta aplicación facilitará considerablemente la búsqueda de las carpetas, de igual forma, a que se evite la perdida o confusión de información de esta misma.
 
-###2. Desarrollo de Prototipo
+### 2. Desarrollo de Prototipo
 
-####2.1. Identificación de Stakeholders
+#### 2.1. Identificación de Stakeholder
 
-
-| Nombre | Representa a| Responsabilidad|
-|:---------------:||:---------------:||:---------------:|
+|Nombre|Representa a|Responsabilidad|
+---------------:|:---------------:|:---------------
 |Empresario Odontología | Gerente, dueño, personas encargada de la clínica odontológica | Revisar información de todos sus empleados, carpetas y clientes. Crear, eliminar, editar y actualizar, carpetas y empleados|
 | Trabajador |Odontólogos y auxiliares de odontología |Consultar, actualizar y editar información de clientes y de sus carpetas. Crear y editar clientes|
 |Cliente|Persona que ya tiene un servicio con la clínica odontológica |Entregar información personal y necesaria a Trabajadores o Empresarios para poder ser atendido.|
