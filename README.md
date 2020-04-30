@@ -6,6 +6,7 @@ I am a student of Software Development in the second semester, and in this works
 I have done some projects with my colleagues that I will also upload, among them is an application for a dentistry, and a pet nursery.
 
 - <a href="https://github.com/WalterAlturoaAparicio/Lenguajes-de-Programacion/tree/master/PetStore" target="_blank">Pet nursery</a> 
+
 ![Logo fruithz](https://github.com/WalterAlturoaAparicio/Lenguajes-de-Programacion/blob/master/Proyecto1/src/Imagenes/logoFrui.jpg)
 - <a href="https://github.com/WalterAlturoaAparicio/Lenguajes-de-Programacion/tree/master/Proyecto1" target="_blank">fruithz (dentistry application)</a> 
 
