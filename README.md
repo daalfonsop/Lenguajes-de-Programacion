@@ -21,9 +21,7 @@ Se desarrollará una aplicación que pueda tener la opción de facilitar el proc
 ### 2. Desarrollo de Prototipo
 
 #### 2.1. Identificación de Stakeholders
-
-
-| Nombre | Representa a| Responsabilidad|
+|Nombre|Representa a|Responsabilidad|
 |:---------------:| |:---------------:| |:---------------:|
 |Empresario Odontología | Gerente, dueño, personas encargada de la clínica odontológica | Revisar información de todos sus empleados, carpetas y clientes. Crear, eliminar, editar y actualizar, carpetas y empleados|
 | Trabajador |Odontólogos y auxiliares de odontología |Consultar, actualizar y editar información de clientes y de sus carpetas. Crear y editar clientes|
